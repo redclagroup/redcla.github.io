@@ -1,0 +1,43 @@
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Light"), url("../fonts/JosefinSans-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Regular"), url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans SemiBold"), url("../fonts/JosefinSans-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Josefin Sans";
+  src: local("Josefin Sans Bold"), url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "EB Garamond";
+  src: local("EB Garamond Regular"), url("../fonts/EBGaramond-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+}
+
+body, div, article, aside, footer, header, main, nav, section, ul, ol, li, button, figure, picture, hr {
+  display: flex;
+}
+
+/*# sourceMappingURL=main.css.map */
