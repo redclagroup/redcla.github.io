@@ -1,0 +1,38 @@
+#footer {
+    width: 100%;
+    height: 305px;
+    flex-direction: column;
+    margin: 0%;
+    background-color: var(--brown-100);
+    > #contact {
+        ul {
+            width: 100%;
+            margin: 0;
+            padding: 0 var(--mspace);
+            flex-direction: column;
+
+            #title {
+                font-size: 20px;
+                text-transform: uppercase;
+                margin: 20px 0;
+            }
+            li {
+                width: 100%;
+                margin-bottom: 0;
+                font-family: EB Garamond;
+                font-size: 16px;
+                color: var(--bg-color);
+                font-weight: 600;
+                margin-bottom: 5px;
+                img {
+                    margin: 0;
+                    flex-direction: row;
+                    margin-right: 10px;
+                }
+                #white-knife, p {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
