@@ -4,11 +4,13 @@
     flex-direction: column;
     margin: 0%;
     background-color: var(--brown-100);
-    > #contact {
+    #contact {
+        flex-direction: column;
+        font-family: EBGaramond;
+        padding: 0 var(--mspace);
         ul {
             width: 100%;
             margin: 0;
-            padding: 0 var(--mspace);
             flex-direction: column;
 
             #title {
@@ -19,7 +21,7 @@
             li {
                 width: 100%;
                 margin-bottom: 0;
-                font-family: EB Garamond;
+                font-family: EBGaramond;
                 font-size: 16px;
                 color: var(--bg-color);
                 font-weight: 600;
@@ -29,9 +31,17 @@
                     flex-direction: row;
                     margin-right: 10px;
                 }
-                #white-knife, p {
-                    justify-content: center;
-                }
+            }
+        }
+        #white-logo {
+            flex-direction: column;
+            justify-content: center;
+            p {
+                font-family: EBGaramond;
+                font-size: 18px;
+                color: var(--bg-color);
+                justify-content: center;
+                text-align: center;
             }
         }
     }

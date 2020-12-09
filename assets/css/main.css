@@ -1,35 +1,35 @@
 @font-face {
-  font-family: "Josefin Sans";
-  src: local("Josefin Sans Light"), url("../fonts/JosefinSans-Light.ttf") format("truetype");
+  font-family: "JosefinSans";
+  src: local("JosefinSans Light"), url("../fonts/JosefinSans-Light.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
-  font-family: "Josefin Sans";
-  src: local("Josefin Sans Regular"), url("../fonts/JosefinSans-Regular.ttf") format("truetype");
+  font-family: "JosefinSans";
+  src: local("JosefinSans Regular"), url("../fonts/JosefinSans-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "Josefin Sans";
-  src: local("Josefin Sans SemiBold"), url("../fonts/JosefinSans-SemiBold.ttf") format("truetype");
+  font-family: "JosefinSans";
+  src: local("JosefinSans SemiBold"), url("../fonts/JosefinSans-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
 }
 @font-face {
-  font-family: "Josefin Sans";
-  src: local("Josefin Sans Bold"), url("../fonts/JosefinSans-Bold.ttf") format("truetype");
+  font-family: "JosefinSans";
+  src: local("JosefinSans Bold"), url("../fonts/JosefinSans-Bold.ttf") format("truetype");
   font-style: normal;
   font-weight: bold;
 }
 @font-face {
-  font-family: "EB Garamond";
+  font-family: "EBGaramond";
   src: local("EB Garamond Regular"), url("../fonts/EBGaramond-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: 300;
 }
 @font-face {
-  font-family: "EB Garamond";
+  font-family: "EBGaramond";
   src: local("EB Garamond Regular"), url("../fonts/EBGaramond-SemiBold.ttf") format("truetype");
   font-style: normal;
   font-weight: 600;
@@ -121,33 +121,45 @@ body {
   margin: 0%;
   background-color: var(--brown-100);
 }
-#footer > #contact ul {
+#footer #contact {
+  flex-direction: column;
+  font-family: EBGaramond;
+  padding: 0 var(--mspace);
+}
+#footer #contact ul {
   width: 100%;
   margin: 0;
-  padding: 0 var(--mspace);
   flex-direction: column;
 }
-#footer > #contact ul #title {
+#footer #contact ul #title {
   font-size: 20px;
   text-transform: uppercase;
   margin: 20px 0;
 }
-#footer > #contact ul li {
+#footer #contact ul li {
   width: 100%;
   margin-bottom: 0;
-  font-family: EB Garamond;
+  font-family: EBGaramond;
   font-size: 16px;
   color: var(--bg-color);
   font-weight: 600;
   margin-bottom: 5px;
 }
-#footer > #contact ul li img {
+#footer #contact ul li img {
   margin: 0;
   flex-direction: row;
   margin-right: 10px;
 }
-#footer > #contact ul li #white-knife, #footer > #contact ul li p {
+#footer #contact #white-logo {
+  flex-direction: column;
   justify-content: center;
+}
+#footer #contact #white-logo p {
+  font-family: EBGaramond;
+  font-size: 18px;
+  color: var(--bg-color);
+  justify-content: center;
+  text-align: center;
 }
 
 /*# sourceMappingURL=main.css.map */
