@@ -1,0 +1,46 @@
+@mixin button {
+    min-width: 150px;
+    border: none;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    background: transparent;
+    color: var(--bg-color);
+    &:hover {
+        background-color: var(--green-100);
+    }
+    &:active {
+        background-color: var(--green-50);
+    }
+}
+
+@mixin button-green {
+    @include button;
+    background-color: var(--green-90);
+    color: var(--white);
+    &:hover {
+        background-color: var(--green-50);
+    }
+    &:active {
+        background-color: var(--green-100);                            
+    }
+}
+
+@mixin button-orange {
+    @include button;
+    background-color: var(--orange-100);
+    color: var(--white);
+    &:hover {
+        background-color: var(--orange-70);
+    }
+    &:active {
+        background-color: var(--orange-90);
+    }
+}
