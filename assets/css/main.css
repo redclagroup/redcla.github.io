@@ -72,54 +72,167 @@ body {
   background-color: var(--bg-color);
 }
 body > main {
-  min-height: calc(100vh - 400px);
-}
-
-body {
-  min-width: 320px;
-  display: flex;
-  width: 100%;
+  min-height: calc(100vh - 397px);
 }
 
 #header {
+  display: flex;
   width: 100%;
   height: 92px;
-  position: relative;
   flex-direction: column;
+  position: relative;
   background-color: var(--red);
-  align-items: center;
 }
-#header .menu {
+#header #items-header {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+#header #items-header #top-header {
   position: absolute;
+  margin-top: 26px;
   right: 0;
-  margin-top: calc(92px / 2 - 20px);
   padding: var(--mspace);
 }
-#header .logomix {
-  margin-top: 46px;
-  right: calc(100vw / 2 - 79px);
+#header #items-header #top-logomix {
+  width: 150px;
+  margin-top: 48px;
+  position: absolute;
+  right: calc(50% - 75px);
+  z-index: 2;
 }
 
 #home {
+  flex-direction: column;
   min-width: 320px;
   width: 100%;
-  height: 50vh;
+  height: 100vh;
 }
 #home #main-photos {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin: 0 var(--mspace);
   z-index: 1;
 }
 #home #main-photos img {
-  margin-left: -30px;
-  z-index: 10;
+  width: 100vw;
+}
+#home #main-photos h1 {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--white);
+  background-color: transparent;
+  margin-top: -65px;
+  text-shadow: var(--black) 0 2px 4px;
+}
+#home .our-menu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home .our-menu h2 {
+  color: var(--gray);
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  margin: 40px 0;
+  justify-content: center;
+}
+#home .our-menu .our-menus {
+  flex-direction: column;
+  justify-items: center;
+  text-decoration: transparent;
+  position: relative;
+  border: none;
+}
+#home .our-menu .our-menus .in-menu {
+  width: 100vw;
+  height: 128px;
+  background-color: var(--red);
+  margin: var(--mspace);
+  padding: var(--mspace);
+}
+#home .our-menu .our-menus .in-menu .menu-title {
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#home .our-menu .our-menus .in-menu .menu-title hr {
+  margin: 0;
+  width: 36px;
+  height: 0;
+  top: 35px;
+  border-top: var(--orange-100) solid 3px;
+}
+#home .our-menu .our-menus .in-menu .menu-title h3 {
+  margin-left: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--white);
+}
+#home .our-menu .our-menus .in-menu .menu-title h3 a {
+  text-decoration: none;
+}
+#home .our-menu .our-menus p {
+  width: 70%;
+  font-family: EBGaramond;
+  text-align: center;
+  font-size: 16px;
+  color: var(--white);
+  margin-right: 30px;
+  z-index: 1;
+}
+#home .our-menu .our-menus img {
+  position: absolute;
+  margin-top: 17px;
+  height: 93px;
+  right: 27px;
+}
+#home .our-menu > a {
+  min-width: 150px;
+  width: 200px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--bg-color);
+  background-color: var(--green-90);
+  color: var(--white);
+  margin-top: 7px;
+  align-items: center;
+  justify-content: center;
+}
+#home .our-menu > a:hover {
+  background-color: var(--green-100);
+}
+#home .our-menu > a:active {
+  background-color: var(--green-50);
+}
+#home .our-menu > a:hover {
+  background-color: var(--green-50);
+}
+#home .our-menu > a:active {
+  background-color: var(--green-100);
 }
 
 #footer {
   width: 100%;
   height: 305px;
   flex-direction: column;
-  margin: 0%;
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
   background-color: var(--brown-100);
 }
 #footer #contact {
@@ -130,6 +243,7 @@ body {
 #footer #contact ul {
   width: 100%;
   margin: 0;
+  padding: 0;
   flex-direction: column;
 }
 #footer #contact ul #title {
@@ -144,7 +258,6 @@ body {
   font-size: 16px;
   color: var(--white);
   font-weight: 600;
-  margin-bottom: 5px;
 }
 #footer #contact ul li img {
   margin: 0;
@@ -152,8 +265,14 @@ body {
   margin-right: 10px;
 }
 #footer #contact #white-logo {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   flex-direction: column;
   justify-content: center;
+}
+#footer #contact #white-logo img {
+  margin-top: 15px;
 }
 #footer #contact #white-logo p {
   font-family: EBGaramond;

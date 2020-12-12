@@ -1,14 +1,92 @@
 #home {
+    flex-direction: column;
     min-width: 320px;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     #main-photos {
+        display: flex;
         flex-direction: column;
-        justify-content: center;
+        margin: 0 var(--mspace);
         z-index: 1;
         img {
-            margin-left: -30px;
-            z-index: 10;
+            width: 100vw;
+        }
+        h1 {
+            font-size: 28px;
+            text-align: center;
+            font-weight: 600;
+            color: var(--white);
+            background-color: transparent;
+            margin-top: -65px;
+            text-shadow: var(--black) 0 2px 4px;
+        }
+    }
+    .our-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h2 {
+            @include mtitle;
+            justify-content: center;
+        }
+        .our-menus {
+            flex-direction: column;
+            justify-items: center;
+            text-decoration: transparent;
+            position: relative;
+            border: none;
+            .in-menu {
+                width: 100vw;
+                height: 128px;
+                background-color: var(--red);
+                margin: var(--mspace);
+                padding: var(--mspace);
+                .menu-title {
+                    width: 30%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    hr {
+                        margin: 0;
+                        width: 36px;
+                        height: 0;
+                        top: 35px;
+                        border-top: var(--orange-100) solid 3px;
+                    }
+                    h3 {
+                        
+                        margin-left: 10px;
+                        text-align: center;
+                        text-transform: uppercase;
+                        color: var(--white);
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+            p {
+               width: 70%;
+               font-family: EBGaramond;
+               text-align: center;
+               font-size: 16px;
+               color: var(--white);
+               margin-right: 30px;
+               z-index: 1;
+
+            }
+            img {
+                position: absolute;
+                margin-top: 17px;
+                height: 93px;
+                right: 27px;
+            }
+        }
+        > a {
+            @include green-button;
+            margin-top: 7px;
+            align-items: center;
+            justify-content: center;
         }
     }
 }
