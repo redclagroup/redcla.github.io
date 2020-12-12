@@ -1,0 +1,48 @@
+#our-units {
+    width: 100vw;
+    flex-direction: column;
+    h2 {
+        @include mtitle;
+    }
+    hr {
+        width: 100vw;
+        margin: 0;
+        border-top: var(--gray) dashed 2px;
+    }
+    p {
+        font-family: EBGaramond;
+        font-size: 16px;
+        text-align: center;
+        margin: 20px 40px;
+    }
+    h3 {
+        font-size: 22px;
+        color: var(--orange-100);
+        margin: 0 var(--mspace);
+        margin-top: 20px;
+    }
+    img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .our-units-photos {
+        flex-direction: column;
+        .cities {
+            flex-direction: column;
+            width: calc(100vw - 20px);
+            margin:  var(--mspace);
+            border: 1px solid var(--gray);
+            align-items: center;
+            h4 {
+               font-size: 16px; 
+               color: var(--gray);
+               margin: 0;
+               padding: 7px 0;
+            }
+            img {
+                width: 95%;
+                margin-bottom: 7px;
+            }
+        }
+    }
+}
