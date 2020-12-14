@@ -75,6 +75,9 @@ body > main {
   min-height: calc(100vh - 397px);
 }
 
+#header {
+  flex-direction: column;
+}
 #header #opened-menu {
   display: none;
   width: 100%;
@@ -119,6 +122,8 @@ body > main {
   text-shadow: var(--black) 0 2px 4px;
 }
 #header #closed-menu {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 820px;
   background-color: var(--red);
@@ -161,9 +166,7 @@ body > main {
   text-shadow: var(--black) 0 2px 4px;
 }
 #header #closed-menu nav {
-  position: absolute;
-  top: 360px;
-  width: 100%;
+  flex-direction: column;
 }
 #header #closed-menu nav ul {
   flex-direction: column;
@@ -179,6 +182,27 @@ body > main {
   text-align: center;
   margin-top: 40px;
   z-index: 1;
+}
+#header #closed-menu hr {
+  border: 0;
+  width: calc(100vw - 4px);
+  margin-top: 50px;
+  border-top: var(--brown-100) solid 1px;
+}
+#header #closed-menu .logged {
+  width: 100%;
+  position: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+#header #closed-menu img {
+  margin-right: 5px;
+}
+#header #closed-menu p {
+  font-size: 16px;
+  color: var(--white);
+  margin-right: 30px;
 }
 
 #home {
