@@ -3,23 +3,6 @@
     min-width: 320px;
     width: 100%;
 
-    #main-photos {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        img {
-            width: 100%;
-        }
-        h1 {
-            font-family: JosefinSans;
-            font-size: 28px;
-            font-weight: 600;
-            color: var(--white);
-            text-align: center;
-            margin-top: -70px;
-        }
-    }
-
     #our-menu {
         flex-direction: column;
         justify-content: center;
