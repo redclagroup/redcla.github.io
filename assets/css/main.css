@@ -563,4 +563,42 @@ body > main {
   text-align: center;
 }
 
+#about {
+  min-width: 320px;
+  flex-direction: column;
+}
+#about #img-about {
+  flex-direction: column;
+}
+#about #img-about img {
+  flex-direction: column;
+  width: 895px;
+  height: 599px;
+  position: relative;
+}
+#about h1 {
+  flex-direction: column;
+}
+#about #description_about {
+  flex-direction: column;
+}
+
+#menu {
+  flex-direction: column;
+}
+#menu .section-menu {
+  flex-direction: column;
+}
+#menu .items-section {
+  flex-direction: column;
+}
+#menu .items-section .item-menu {
+  flex-direction: line;
+}
+#menu .items-section .item-menu .line-menu {
+  align-items: center;
+  width: 380px;
+  overflow: hidden;
+}
+
 /*# sourceMappingURL=main.css.map */
