@@ -1,0 +1,17 @@
+#menu {
+    flex-direction: column;
+    .section-menu {
+        flex-direction: column;
+    }
+    .items-section{
+        flex-direction: column;
+        .item-menu{
+            flex-direction:line;
+            .line-menu{
+                align-items: center;
+                width: 380px;
+                overflow: hidden;
+            }
+        }
+    }
+}
