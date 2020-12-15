@@ -8,13 +8,13 @@
         width: 100%;
         display: flex;
         z-index: 1;
-        #menu-header {
+        .menu-header {
             position: absolute;
             margin-top: 26px;
             right: 10px;
             padding: var(--mspace);
         }
-        #top-logomix {
+        .top-logomix {
             width: 150px;
             margin-top: 48px;
             position: absolute;
@@ -26,30 +26,69 @@
         display: flex;
         position: absolute;
         width: 100%;
-        height: 100vh;
-        margin-top: -100vh;
+        margin: 0;
+        padding: 0;
+        top: -600px;
+        height: 600px;
         flex-direction: column;
+        align-items: center;
         background-color: var(--red);
         z-index: 1;
+        .menu-header {
+            width: 40px;
+            position: absolute;
+            margin-top: 26px;
+            right: 10px;
+            padding: var(--mspace);
+        }
+        > img {
+            align-items: center;
+            width: 200px;
+            margin-top: 50px;
+        }
+        hr {
+            width: calc(100% - 20px);
+            margin-top: 30px;
+            border: 0;
+            border-top: solid var(--brown-100) 1px;
+        }
         nav {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
             ul {
-                width: 100%;
-                flex-direction: column;
                 margin: 0;
                 padding: 0;
+                flex-direction: column;
+                align-items: center;
                 li {
-                    width: 100%;
-                    padding: 0;
-                    margin-top: 50;
                     font-size: 25px;
-                    text-align: center;
-                    color: var(--white);
                     margin-top: 30px;
-                    a {
-                        text-decoration: none;
-                        color: var(--white);
-                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: var(--white);
+                }
+            }
+        }
+        .logged {
+            margin-top: 40px;
+            align-items: center;
+            justify-content: center;
+            img {
+                padding-right: 10px;
 
+            }
+            .profile {
+                padding-right: 30px;
+                flex-direction: column;
+                color: var(--white);
+                strong {
+                    font-size: 20px;
+                }
+                small {
+                    font-size: 16px;
                 }
             }
         }
