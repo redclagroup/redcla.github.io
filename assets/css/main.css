@@ -81,12 +81,10 @@ body > main {
   background-color: var(--red);
   height: 92px;
   position: relative;
-  z-index: 10;
 }
 .header #items-header {
   width: 100%;
   display: flex;
-  z-index: 1;
 }
 .header #items-header .menu-header {
   position: absolute;
@@ -102,17 +100,16 @@ body > main {
 }
 .header .menu {
   transition: top 1s ease-in-out;
-  display: flex;
-  position: absolute;
+  z-index: 2;
+  position: fixed;
   width: 100%;
+  height: 100vh;
   margin: 0;
-  padding: 0;
-  top: -600px;
-  height: 600px;
+  padding-bottom: 50px;
+  top: -100vh;
   flex-direction: column;
   align-items: center;
   background-color: var(--red);
-  z-index: 1;
 }
 .header .menu .menu-header {
   width: 40px;
@@ -121,18 +118,14 @@ body > main {
   right: 10px;
   padding: var(--mspace);
 }
-.header .menu > img {
+.header .menu .top-logomix {
   align-items: center;
   width: 200px;
   margin-top: 50px;
 }
-.header .menu hr {
-  width: calc(100% - 20px);
-  margin-top: 30px;
-  border: 0;
-  border-top: solid var(--brown-100) 1px;
-}
 .header .menu nav {
+  position: absolute;
+  top: 150px;
   flex-direction: column;
   align-items: center;
   margin: 0;
@@ -152,24 +145,37 @@ body > main {
   text-decoration: none;
   color: var(--white);
 }
-.header .menu .logged {
-  margin-top: 40px;
-  align-items: center;
+.header .menu footer {
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+.header .menu footer hr {
+  margin-bottom: 20px;
+  width: calc(100% - 20px);
+  margin-top: 30px;
+  border: 0;
+  border-top: solid var(--brown-100) 1px;
+}
+.header .menu footer .logged-user {
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-.header .menu .logged img {
-  padding-right: 10px;
-}
-.header .menu .logged .profile {
-  padding-right: 30px;
+.header .menu footer .logged-user .data-user {
   flex-direction: column;
   color: var(--white);
+  margin: 0 var(--mspace);
 }
-.header .menu .logged .profile strong {
-  font-size: 20px;
+.header .menu footer .logged-user img {
+  margin-left: 20px;
 }
-.header .menu .logged .profile small {
-  font-size: 16px;
+.header .menu.logged nav ul li hr {
+  display: flex;
+}
+.header .menu.logged nav ul li.logged-user {
+  display: flex;
 }
 
 .opened-menu .header .menu {
