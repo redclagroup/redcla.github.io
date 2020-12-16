@@ -25,39 +25,51 @@
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <section class="header">
+     <!-- HEADER -->
+     <section class="header">
         <div id="items-header">
-            <img id="menu-header" src="assets/images/menu.svg" alt="Menu" />
-            <img id="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" />
+            <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
+            <img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors">
         </div>
-    <section class="menu">
-        <nav>
-            <ul>
-                <li>Quem Somos</li>
-                <li>Cardápio</li>
-                <li>Pedido Online</li>
-                <li>Contato</li>
-            </ul>
-        </nav>
+        <div class="menu">
+            <img class="menu-header" src="assets/images/close_button_white.svg" alt="Fecha menu">
+            <hr />
+            <nav>
+                <ul>
+                    <li><a href="about.html">Quem Somos</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>    
+                    <li><a href="order.html">Pedido Online</a></li>
+                    <li><a href="index.html#form-contact">Contato</a></li>
+                    <li><a href="profile.html">Minha Conta</a></li>
+                </ul>
+            </nav>
+            <footer>
+                <hr />
+                <div class="logged-user">
+                    <img src="assets/images/user.svg" alt="">
+                    <div class="data-user">
+                        <strong>João da Silva</strong>
+                        <small>joaodasilva@gmail.com</small>
+                    </div>
+                    <img src="assets/images/user-into.svg" alt="Usuário">
+                </div>
+            </footer>
+        </div>
     </section>
-    </section> <!-- end header-->
 
     <section id="about">
-        <div id="img-about">
-            <img src="/assets/images/about_image.webp" alt="Balcão de atendimento do restaurante na vista de cliente" />
-        </div>
+        <img src="/assets/images/about_image.webp" alt="Cheff trabalhando" />
+        <div id="content">
+            <h1>Quem Somos</h1>
+    
+            <p>Rafael All é uma verdadeira surpresa para o mundo da culinária. Sem nenhuma tradição familiar na cozinha, dono da premiada rede de restaurantes pelo guia Michelin, Mix Flavors, desde tenra idade, sempre gostou de "inventar seus próprios pratos". Quando chegou a hora de ir para faculdade, não teve dúvidas. Escolheu gastronomia. Depois que se formou, passou um tempo na Europa, onde fez algumas especializações, depois, uma rápida temporada nos Estados Unidos, voltou para o Brasil.</p>
 
-        <h1>Quem Somos</h1>
-
-        <section id="description_about">
-
-            <p>Rafael All é uma verdadeira surpresa para o mundo da culinária. Sem nenhuma tradição familiar na cozinha, dono da premiada rede de restaurantes pelo guia Michelin, Mix Flavors, desde tenra idade, sempre gostou de "inventar seus próprios pratos". Quando chegou a hora de ir pra faculdade, não teve dúvidas. Escolheu gastronomia. Depois que se formou, passou um tempo na Europa, onde fez algumas especializações, depois, uma rápida temporada nos Estados Unidos, voltou para o Brasil.
-
-                O empreendedorismo, esse, herdou de seu pai, empresário de sucesso no Brasil e Estados Unidos. Com 25 anos de volta ao Brasil abriu o seu primeiro restaurante em São Paulo e dois anos depois veio a oportunidade de abrir outra unidade em Miami, nos Estados Unidos. Impulsionado pelo sucesso das duas casas, a convite de familiares maternos, abriu outra em Montevidéu e agora acaba de inaugurar a sua última no Rio de Janeiro, cidade do coração.
+            <p>O empreendedorismo, esse, herdou de seu pai, empresário de sucesso no Brasil e Estados Unidos. Com 25 anos de volta ao Brasil abriu o seu primeiro restaurante em São Paulo e dois anos depois veio a oportunidade de abrir outra unidade em Miami, nos Estados Unidos. Impulsionado pelo sucesso das duas casas, a convite de familiares maternos, abriu outra em Montevidéu e agora acaba de inaugurar a sua última no Rio de Janeiro, cidade do coração.
             </p>
 
-        </section>
+        </div>
+
+    </section>
     <!-- FOOTER -->
     <footer id="footer">
         <button type="button">
@@ -80,6 +92,7 @@
             </div>
         </div>
     </footer>
+    
     
 </body>
 </html>
