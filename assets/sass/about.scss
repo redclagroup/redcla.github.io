@@ -23,11 +23,9 @@
             font-family: EBGaramond;
             font-size: 14px;
             width: 100%;
+            padding-top: 20px;
             padding-left: var(--mspace);
             padding-right: var(--mspace);
-            &:first {
-                padding-top: 20px;
-            }
             margin: 0;
             background-color: var(--orange-70);
             &:last-child {

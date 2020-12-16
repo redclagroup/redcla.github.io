@@ -4,12 +4,11 @@
     flex-direction: column;
     display: flex;
     align-items: center;
-    position: relative;
     img {
         position: absolute;
         margin-top: 0;
         width: 250%;
-        margin-left: 250px;
+        margin-left: 125px;
         z-index: 1;
     }
     .notice {
