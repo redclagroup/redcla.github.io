@@ -26,13 +26,17 @@
 </head>
 <body class="opened-menu">
     <!-- HEADER -->
-    <section class="header">
-        <div id="items-header">
-            <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
-            <img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors">
-        </div>
+    <header id="header">
+        <a href="index.html#home">
+            <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
+        </a>
+        <button id="btn-open">
+            <img src="assets/images/menu.svg" alt="Menu" />
+        </button>
+        <button id="btn-close">
+            <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
+        </button>
         <div class="menu">
-            <img class="menu-header" src="assets/images/close_button_white.svg" alt="Fecha menu">
             <hr />
             <nav>
                 <ul>
@@ -40,25 +44,31 @@
                     <li><a href="menu.html">Cardápio</a></li>    
                     <li><a href="order.html">Pedido Online</a></li>
                     <li><a href="index.html#form-contact">Contato</a></li>
-                    <li><a href="profile.html">Minha Conta</a></li>
+                    <li class="logged-hide"><a href="profile.html">Minha Conta</a></li>
                 </ul>
             </nav>
-            <footer>
+            <div class="footer">
                 <hr />
-                <div class="logged-user">
-                    <img src="assets/images/user.svg" alt="">
-                    <div class="data-user">
-                        <strong>João da Silva</strong>
-                        <small>joaodasilva@gmail.com</small>
+                <div>
+                    <picture>
+                        <a href="profile.html">
+                            <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                        </a>
+                    </picture>
+                    <div>
+                        <a href="profile.html">
+                            <strong>João da Silva<br /></strong></strong>
+                            <small>joaodasilva@gmail.com</small>
+                        </a>
                     </div>
-                    <img src="assets/images/user-into.svg" alt="Usuário">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
+                    </button>
                 </div>
  
-            </footer>
-
+            </div>
         </div>
-
-    </section> <!-- end header-->
+    </header> <!-- end header-->
     
     <section id="home">
         <div id="main-photos">

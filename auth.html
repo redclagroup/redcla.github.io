@@ -25,10 +25,12 @@
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
 <body>
-     <section class="header">
+     <header class="header">
         <div id="items-header">
-            <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
-            <img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors">
+            <a href="index.html"><img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors"></a>
+            <button id="btn-menu">
+                <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
+            </button>
         </div>
         <div class="menu">
             <img class="menu-header" src="assets/images/close_button_white.svg" alt="Fecha menu">
@@ -42,20 +44,29 @@
                     <li><a href="profile.html">Minha Conta</a></li>
                 </ul>
             </nav>
-            <footer>
+            <div class="footer">
                 <hr />
                 <div class="logged-user">
-                    <img src="assets/images/user.svg" alt="">
+                    <picture>
+                        <a href="profile.html">
+                            <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                        </a>
+                    </picture>
                     <div class="data-user">
-                        <strong>João da Silva</strong>
-                        <small>joaodasilva@gmail.com</small>
+                        <a href="profile.html">
+                            <strong>João da Silva</strong>
+                            <small>joaodasilva@gmail.com</small>
+                        </a>
                     </div>
-                    <img src="assets/images/user-into.svg" alt="Usuário">
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
+                    </button>
+                    <a href="auth.html">Minha Conta</a>
                 </div>
  
-            </footer>
+            </div>
         </div>
-    </section> <!-- end header-->
+    </header> <!-- end header-->
     <main id="auth">
          <section>
 
