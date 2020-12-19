@@ -24,49 +24,51 @@
         <meta name="description" content="Conheça Mix Flavors do Rio de Janeiro" />
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
-<body>
-     <header class="header">
-        <div id="items-header">
-            <a href="index.html"><img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors"></a>
-            <button id="btn-menu">
-                <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
+    <body>
+        <!-- HEADER -->
+        <header id="header">
+            <a href="index.html#home">
+                <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
+            </a>
+            <button id="open-btn">
+                <img src="assets/images/menu.svg" alt="Menu" />
             </button>
-        </div>
-        <div class="menu">
-            <img class="menu-header" src="assets/images/close_button_white.svg" alt="Fecha menu">
-            <hr />
-            <nav>
-                <ul>
-                    <li><a href="about.html">Quem Somos</a></li>
-                    <li><a href="menu.html">Cardápio</a></li>    
-                    <li><a href="order.html">Pedido Online</a></li>
-                    <li><a href="index.html#form-contact">Contato</a></li>
-                    <li><a href="profile.html">Minha Conta</a></li>
-                </ul>
-            </nav>
-            <div class="footer">
-                <hr />
-                <div class="logged-user">
-                    <picture>
-                        <a href="profile.html">
-                            <img src="assets/images/user.svg" alt="Imagem Usuário" />
-                        </a>
-                    </picture>
-                    <div class="data-user">
-                        <a href="profile.html">
-                            <strong>João da Silva</strong>
-                            <small>joaodasilva@gmail.com</small>
-                        </a>
+            <button id="close-btn">
+                <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
+            </button>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">Quem Somos</a></li>
+                        <li><a href="menu.html">Cardápio</a></li>    
+                        <li><a href="order.html">Pedido Online</a></li>
+                        <li><a href="index.html#form-contact">Contato</a></li>
+                        <li id="logged-hide"><a href="profile.html">Minha Conta</a></li>
+                    </ul>
+                </nav>
+                <div class="footer">
+                    <hr />
+                    <div>
+                        <picture>
+                            <a href="profile.html">
+                                <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                            </a>
+                        </picture>
+                        <div>
+                            <a href="profile.html">
+                                <strong>João da Silva<br /></strong></strong>
+                                <small>joaodasilva@gmail.com</small>
+                            </a>
+                        </div>
+                        <button type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
+                        </button>
                     </div>
-                    <button type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
-                    </button>
-                    <a href="auth.html">Minha Conta</a>
+     
                 </div>
- 
             </div>
-        </div>
-    </header> <!-- end header-->
+        </header> <!-- end header-->
     <main id="auth">
          <section>
 
@@ -108,91 +110,104 @@
  
         </form>
  
-            <form class="auth" >
-                 <h1>Criar conta</h1>
-                 <hr />
+        <form class="auth" >
+                <h1>Criar conta</h1>
+                <hr />
+
+            <div class="field">
+                <input type="text" name="name" id="name" />
+                <label for="name">Nome Completo</label>
+            </div>
+
+                <div class="field">
+                    <input type="email" name="email" id="email-register" />
+                    <label for="email-register">E-mail</label>
+                </div>
+                
+                <div class="field">
+                <input type="text" name="Documento" id="Document" />
+                <label for="Document">Documento</label>
+            </div>
+                
+                <div class="field">
+                <input type="tel" name="phone" id="phone" />
+                <label for="phone">Telefone</label>
+            </div>
 
                 <div class="field">
                     <input type="text" name="name" id="name" />
                     <label for="name">Nome Completo</label>
                 </div>
- 
-                 <div class="field">
-                     <input type="email" name="email" id="email-register" />
-                     <label for="email-register">E-mail</label>
-                 </div>
-                 
-                 <div class="field">
-                    <input type="text" name="Documento" id="Document" />
-                    <label for="Document">Documento</label>
+                
+                <div class="field">
+                    <input type="date" name="birth_at" id="birth_at" />
+                    <label for="birth_at">Data de Nascimento</label>
                 </div>
-                 
-                 <div class="field">
-                    <input type="tel" name="phone" id="phone" />
-                    <label for="phone">Telefone</label>
+
+                <div class="field">
+                    <input type="password" name="password" id="password_new" />
+                    <label for="password_new">Crie uma Senha</label>
                 </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password_confirm" />
+                    <label for="password_confirm">Confirme a Senha</label>
+                </div>
+
+                <div class="actions">
+                    <div class="action">
+                        <a href="auth.html#login" class="link">Cadastrar</a>
+                    </div>
+                    
+                </div>
+
+        </form>
  
-                 <div class="field">
-                     <input type="text" name="name" id="name" />
-                     <label for="name">Nome Completo</label>
-                 </div>
-                 
-                 <div class="field">
-                     <input type="date" name="birth_at" id="birth_at" />
-                     <label for="birth_at">Data de Nascimento</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_new" />
-                     <label for="password_new">Crie uma Senha</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_confirm" />
-                     <label for="password_confirm">Confirme a Senha</label>
-                 </div>
- 
-                 <div class="actions">
-                     <div class="action">
-                         <a href="auth.html#login" class="link">Cadastrar</a>
-                     </div>
-                     
-                 </div>
- 
+        <form class="forget" >
+            <h1>Esqueci a senha</h1>
+            <hr />
+            <div class="forget-message">
+                <img src="assets/images/close_button_green.svg" alt="Botão Fechar">
+                <span>Veja as instruções no seu e-mail</span>
+            </div>
+
+
             </form>
- 
-            <form class="forget" >
-                <h1>Esqueci a senha</h1>
+
+            <form class=" hide">
+                <h1>Redefinir senha</h1>
                 <hr />
-                <div class="forget-message">
-                    <img src="assets/images/close_button_green.svg" alt="Botão Fechar">
-                    <span>Veja as instruções no seu e-mail</span>
+
+                <div class="field">
+                    <input type="password" name="password" id="password_reset" />
+                    <label for="password_reset">Digite sua Senha</label>
                 </div>
- 
- 
-             </form>
- 
-             <form class=" hide">
-                 <h1>Redefinir senha</h1>
-                 <hr />
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_reset" />
-                     <label for="password_reset">Digite sua Senha</label>
-                 </div>
- 
-                 <div class="actions">
-                     <button type="submit">Redefinir</button>
-                 </div>
- 
-             </form>
- 
- 
-             <p>©2023 por Hcode Lab - Red Clan Group</p>
+
+                <div class="actions">
+                    <button type="submit">Redefinir</button>
+                </div>
+
+            </form>
+
+
+            <p>©2023 por Hcode Lab - Red Clan Group</p>
          </section>    
      
     </main>  
 
- 
+    <script>
+        const btnOpen = document.querySelector('#open-btn');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        );
+        const btnClose = document.querySelector('#close-btn');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        )
+    </script>
  </body>
 </html>

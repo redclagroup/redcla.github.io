@@ -24,27 +24,27 @@
     <meta name="description" content="Conheça Mix Flavors do Rio de Janeiro" />
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
-<body class="opened-menu">
+<body>
     <!-- HEADER -->
     <header id="header">
         <a href="index.html#home">
             <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
         </a>
-        <button id="btn-open">
+        <button id="open-btn">
             <img src="assets/images/menu.svg" alt="Menu" />
         </button>
-        <button id="btn-close">
+        <button id="close-btn">
             <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
         </button>
         <div class="menu">
-            <hr />
             <nav>
                 <ul>
+                    <li><a href="index.html#home">Home</a></li>
                     <li><a href="about.html">Quem Somos</a></li>
                     <li><a href="menu.html">Cardápio</a></li>    
                     <li><a href="order.html">Pedido Online</a></li>
                     <li><a href="index.html#form-contact">Contato</a></li>
-                    <li class="logged-hide"><a href="profile.html">Minha Conta</a></li>
+                    <li id="logged-hide"><a href="profile.html">Minha Conta</a></li>
                 </ul>
             </nav>
             <div class="footer">
@@ -76,33 +76,28 @@
             <h1>Surpreenda-se com os sabores do chef</h1>
         </div> 
  
+        <h2>
+            Confira o nosso cardápio
+        </h2>
+        
         <div id="our-menu">
-            <h2>
-                Confira o nosso cardápio
-            </h2>
-
             <div class="our-menus">
-
                 <div class="in-menu">
-
                     <div class="menu-title">
                         <hr />
                         <h3><a href="#">Carnes</a></h3>
                     </div>
-
                     <p>Uma combinação perfeita do tempero uruguaio com as peculiaridades da cozinha carioca</p>
-                    <img src="assets/images/meat.svg" alt="Carnes">
-                
+                    <img src="assets/images/meat.svg" alt="Carnes" />
                 </div>
                 <div class="in-menu">
                     <div class="menu-title">
                         <hr />
                         <h3><a href="#">Massas</a></h3>
                     </div>
-                    <p>o chef coloca no seu prato os meis variados sabores da cozinha italiana</p>
+                    <p>o chef coloca no seu prato os mais variados sabores da cozinha italiana</p>
                     <img src="assets/images/pasta.svg" alt="Massas">
                 </div>
-
                 <div class="in-menu">
                     <div class="menu-title">
                         <hr />
@@ -121,12 +116,15 @@
     
     <section id="our-units">
         <h2>Visite uma de nossas unidades</h2>
-        <hr />
-        <p>Venha conhecer a nossa mais nova unidade no Rio de Janeiro. Estamos na Vieira Souto, em 
-            Ipanema, em frente ao Posto 8. Teremos o maior prazer em recebê-lo</p>
-        <hr />
-        <h3>Rio de Janeiro</h3>
-        <img src="assets/images/home_rio_de_janeiro.webp" alt="Rio de Janeiro">
+        <div class="rio-de-janeiro-invite">
+            <p>Venha conhecer a nossa mais nova unidade no Rio de Janeiro. Estamos na Vieira Souto, em 
+                Ipanema, em frente ao Posto 8. Teremos o maior prazer em recebê-lo
+            </p>
+            <div class="rio-de-janeiro-photo">
+                <h3>Rio de Janeiro</h3>
+                <img src="assets/images/home_rio_de_janeiro.webp" alt="Rio de Janeiro">
+            </div>
+        </div>
         <div class="our-units-photos">
             <div class="cities">
                 <h4>São Paulo</h4>
@@ -186,20 +184,24 @@
         </form>
         <div id="how-to-arrive">
             <div>
-                <img src="assets/images/google-place.svg" alt="Pin Google Maps">
-                <p>Como Chegar <strong><br />Rio de Janeiro</strong></p>
-            </div>
-            <div>
-                <img src="assets/images/wzapp-orange.svg" alt="WhatsApp">
-                <p>Nosso WhatsApp <strong><br />(21)99876-5432</strong></p>
+                <div>
+                    <img src="assets/images/google-place.svg" alt="Pin Google Maps">
+                    <img src="assets/images/wzapp-orange.svg" alt="WhatsApp">
+                </div>
+                <div>
+                    <span>Como Chegar <small><br />Rio de Janeiro</small></span>
+                    <span>Nosso WhatsApp <small><br />(21)99876-5432</small></span>
+                </div>
             </div>
         </div>
-        <img id="google-map" src="assets/images/home_map.webp" alt="Google Map">
+            <img id="google-map" src="assets/images/home_map.webp" alt="Google Map">
     </section>
     <!-- FOOTER -->
     <footer id="footer">
         <button type="button">
-            <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+            <a href="index.html#home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+            </a>
         </button>
         <div id="contact">
             <ul>
@@ -218,6 +220,19 @@
             </div>
         </div>
     </footer>
-    
+    <script>
+        const btnOpen = document.querySelector('#open-btn');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        );
+        const btnClose = document.querySelector('#close-btn');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        );
+    </script>
 </body>
 </html>

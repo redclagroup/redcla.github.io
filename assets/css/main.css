@@ -101,7 +101,7 @@ hr.divider {
   position: absolute;
   width: 150px;
   top: 48px;
-  right: calc(50vw - 75px);
+  left: calc(50vw - 75px);
   z-index: 3;
 }
 #header button {
@@ -110,14 +110,15 @@ hr.divider {
   outline: none;
   padding: var(--mspace);
 }
-#header #btn-open, #header #btn-close {
+#header #open-btn, #header #close-btn {
   position: absolute;
   margin-top: 16px;
   right: 10px;
   padding: var(--mspace);
 }
-#header #btn-close {
+#header #close-btn {
   display: none;
+  z-index: 4;
 }
 #header .menu {
   transition: top 1s ease-in-out;
@@ -163,7 +164,7 @@ hr.divider {
   color: var(--white);
 }
 #header .menu .footer {
-  display: none;
+  display: flex;
   position: absolute;
   bottom: 30px;
   flex-direction: column;
@@ -182,10 +183,11 @@ hr.divider {
   align-items: center;
   margin-top: 20px;
   margin: var(--mspace);
+  width: min-content;
   display: flex;
 }
 #header .menu .footer > div picture, #header .menu .footer hr picture {
-  margin: var(--mspace);
+  padding: var(--mspace);
   width: 40px;
 }
 #header .menu .footer > div div, #header .menu .footer hr div {
@@ -195,6 +197,7 @@ hr.divider {
   flex: 1;
 }
 #header .menu .footer > div div a, #header .menu .footer hr div a {
+  margin: 0 40px 0 20px;
   flex-direction: column;
 }
 #header .menu .footer > div a, #header .menu .footer hr a {
@@ -209,7 +212,7 @@ hr.divider {
 .opened-menu #header #open-btn {
   display: none;
 }
-.opened-menu #header #btn-close {
+.opened-menu #header #close-btn {
   display: flex;
   z-index: 3;
 }
@@ -225,10 +228,70 @@ hr.divider {
 .logged #header .menu .footer {
   display: flex;
 }
-.logged #header .menu nav ul li.logged-hide {
+.logged #header .menu nav ul li#logged-hide {
   display: none;
 }
 
+@media (min-width: 1200px) {
+  #header {
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--red);
+    height: 113px;
+    position: relative;
+  }
+  #header .logomix {
+    transition: all 1s ease-in-out;
+    position: absolute;
+    width: 250px;
+    left: 15px;
+    top: 40px;
+    z-index: 3;
+  }
+  #header #open-btn, #header #close-btn {
+    display: none;
+  }
+  #header .menu {
+    top: initial;
+    position: static;
+    width: 100%;
+    height: 113px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0;
+  }
+  #header .menu nav {
+    width: 100%;
+    position: initial;
+    margin-left: 300px;
+    justify-content: center;
+  }
+  #header .menu nav ul {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  #header .menu nav ul li {
+    margin-top: 0;
+  }
+  #header .menu nav ul li a {
+    font-size: 24px;
+    font-weight: 400;
+    min-width: 160px;
+    padding: var(--mspace) 0;
+    text-align: center;
+  }
+  #header .menu nav ul li a:hover {
+    color: var(--orange-100);
+  }
+  #header .menu .footer {
+    position: initial;
+  }
+  #header .menu .footer hr {
+    display: none;
+  }
+}
 #home {
   flex-direction: column;
   min-width: 320px;
@@ -250,24 +313,24 @@ hr.divider {
   text-align: center;
   margin-top: -70px;
 }
-#home #our-menu {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#home #our-menu h2 {
+#home > h2 {
   color: var(--gray);
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 400;
   text-align: center;
   margin: 40px 0;
+  margin: 10px 0;
   justify-content: center;
+}
+#home #our-menu {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 #home #our-menu .our-menus {
   flex-direction: column;
   justify-items: center;
-  text-decoration: transparent;
   position: relative;
   border: none;
 }
@@ -277,40 +340,40 @@ hr.divider {
   background-color: var(--red);
   margin: var(--mspace);
   padding: var(--mspace);
-}
-#home #our-menu .our-menus .in-menu .menu-title {
-  width: 30%;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
-#home #our-menu .our-menus .in-menu .menu-title hr {
-  margin: 0;
+#home #our-menu .our-menus .in-menu .menu-title {
+  flex-direction: column;
+  width: 30%;
+  justify-content: center;
+}
+#home #our-menu .our-menus .in-menu .menu-title > hr {
+  border: 0;
+  padding: 0;
+  border-top: var(--orange-100) solid 2px;
   width: 36px;
-  height: 0;
-  top: 35px;
-  border-top: var(--orange-100) solid 3px;
+  align-self: center;
 }
 #home #our-menu .our-menus .in-menu .menu-title h3 {
-  margin-left: 10px;
-  text-align: center;
+  margin-left: 18px;
+  width: 30%;
   text-transform: uppercase;
   color: var(--white);
 }
 #home #our-menu .our-menus .in-menu .menu-title h3 a {
+  text-align: center;
   text-decoration: none;
   color: white;
 }
-#home #our-menu .our-menus p {
-  width: 70%;
+#home #our-menu .our-menus .in-menu p {
+  flex: 1;
   font-family: EBGaramond;
   text-align: center;
   font-size: 16px;
   color: var(--white);
-  margin-right: 30px;
   z-index: 1;
 }
-#home #our-menu .our-menus img {
+#home #our-menu .our-menus .in-menu img {
   position: absolute;
   margin-top: 17px;
   height: 93px;
@@ -351,6 +414,95 @@ hr.divider {
   background-color: var(--green-act);
 }
 
+@media (min-width: 1380px) {
+  #home {
+    position: initial;
+  }
+  #home #main-photos {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  #home #main-photos > img {
+    position: absolute;
+    margin-top: -330px;
+  }
+  #home #main-photos h1 {
+    font-size: 100px;
+    margin-bottom: 0;
+    width: 50%;
+    margin-top: 600px;
+    margin-bottom: 140px;
+    align-self: flex-end;
+    z-index: 2;
+  }
+  #home h2 {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    margin: 100px var(--dspace);
+  }
+  #home #our-menu {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  #home #our-menu .our-menus {
+    width: 1240px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #home #our-menu .our-menus .in-menu {
+    flex-direction: column;
+    width: 360px;
+    height: 450px;
+    align-items: flex-start;
+    justify-content: center;
+    position: initial;
+    width: 100%;
+  }
+  #home #our-menu .our-menus .in-menu .menu-title > hr {
+    margin-top: 55px;
+    border: none;
+    border-top: var(--orange-100) solid 4px;
+    width: 60px;
+  }
+  #home #our-menu .our-menus .in-menu .menu-title h3 {
+    font-family: HBGaramond;
+    font-size: 32px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    z-index: 1;
+    text-shadow: var(--black) 1px 2px 3px;
+  }
+  #home #our-menu .our-menus .in-menu .menu-title h3 > a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+  }
+  #home #our-menu .our-menus .in-menu p {
+    font-family: JosefinSans;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    z-index: 1;
+    text-shadow: var(--black) 1px 1px 1px;
+  }
+  #home #our-menu .our-menus .in-menu img {
+    position: relative;
+    justify-content: space-around;
+    margin-top: -175px;
+    height: 360px;
+    margin-left: 18px;
+    padding-left: 10px;
+  }
+  #home #our-menu > a {
+    margin-top: 70px;
+  }
+}
 #our-units {
   width: 100vw;
   flex-direction: column;
@@ -363,24 +515,26 @@ hr.divider {
   text-align: center;
   margin: 40px 0;
 }
-#our-units hr {
-  width: 100vw;
-  margin: 0;
-  border-top: var(--gray) dashed 2px;
+#our-units .rio-de-janeiro-invite {
+  flex-direction: column;
 }
-#our-units p {
+#our-units .rio-de-janeiro-invite p {
+  margin: 0;
   font-family: EBGaramond;
   font-size: 16px;
-  text-align: center;
-  margin: 20px 40px;
+  text-align: justify;
+  margin: 0px 30px;
 }
-#our-units h3 {
+#our-units .rio-de-janeiro-invite .rio-de-janeiro-photo {
+  flex-direction: column;
+}
+#our-units .rio-de-janeiro-invite .rio-de-janeiro-photo h3 {
   font-size: 22px;
   color: var(--orange-100);
   margin: 0 var(--mspace);
   margin-top: 20px;
 }
-#our-units img {
+#our-units .rio-de-janeiro-invite .rio-de-janeiro-photo img {
   width: 100%;
   margin-bottom: 20px;
 }
@@ -405,9 +559,40 @@ hr.divider {
   margin-bottom: 7px;
 }
 
+@media (min-width: 1380px) {
+  #our-units h2 {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    margin: 100px var(--dspace);
+  }
+  #our-units .rio-de-janeiro-invite {
+    margin: 0 var(--dspace);
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  #our-units .rio-de-janeiro-invite p {
+    font-family: EBGaramond;
+    font-size: 40px;
+    font-weight: 300;
+    width: 50%;
+    padding: 50px;
+    align-items: center;
+  }
+  #our-units .rio-de-janeiro-invite .rio-de-janeiro-photo h3 {
+    font-size: 48px;
+  }
+  #our-units .rio-de-janeiro-invite .rio-de-janeiro-photo img {
+    margin: 0;
+  }
+  #our-units .our-units-photos {
+    flex-direction: row;
+  }
+}
 #our-reservation {
   min-width: 320px;
-  height: 500px;
   width: 100%;
   flex-direction: column;
   background-color: var(--red);
@@ -430,30 +615,26 @@ hr.divider {
   padding: 0;
 }
 #our-reservation form .field {
+  margin: 10px 0;
   position: relative;
   flex-direction: column;
   width: 250px;
-  margin-bottom: 50px;
+  justify-content: center;
 }
 #our-reservation form .field label {
   font-size: 22px;
   color: var(--white);
   position: absolute;
-  top: 10px;
-  bottom: 10px;
   left: 10px;
 }
 #our-reservation form .field input, #our-reservation form .field textarea, #our-reservation form .field select {
+  height: 40px;
   border: var(--white) 2px solid;
   line-height: 1.5em;
-  padding-bottom: 10px;
   padding-left: 70px;
   background-color: transparent;
-  color: var(--white);
+  color: var(--black);
   font-size: 16px;
-}
-#our-reservation form .field input, #our-reservation form .field select {
-  color: transparent;
 }
 #our-reservation a {
   min-width: 150px;
@@ -473,7 +654,7 @@ hr.divider {
   color: var(--bg-color);
   background-color: var(--green-90);
   color: var(--white);
-  margin-bottom: 30px;
+  margin: 30px 0;
 }
 #our-reservation a:hover {
   background-color: var(--green-100);
@@ -488,6 +669,24 @@ hr.divider {
   background-color: var(--green-act);
 }
 
+@media (min-width: 1380px) {
+  #our-reservation form h2 {
+    font-size: 60px;
+  }
+  #our-reservation form .fields {
+    flex-direction: row;
+    justify-content: center;
+  }
+  #our-reservation form .fields .field {
+    margin: 10px;
+  }
+  #our-reservation form .fields .field input {
+    height: 50px;
+  }
+  #our-reservation form .fields a {
+    margin-left: 5px;
+  }
+}
 #form-contact {
   flex-direction: column;
 }
@@ -579,33 +778,45 @@ hr.divider {
 #form-contact a:active {
   background-color: var(--green-act);
 }
-#form-contact #how-to-arrive {
-  height: 110px;
-  position: relative;
-  margin-bottom: 20px;
-  justify-content: space-around;
-}
 #form-contact #how-to-arrive div {
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
 }
-#form-contact #how-to-arrive div img {
-  justify-content: center;
+#form-contact #how-to-arrive div div {
+  position: relative;
+  margin: 0 25px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+#form-contact #how-to-arrive div div img {
+  position: relative;
+  justify-content: flex-start;
   width: 35px;
   top: 10px;
 }
-#form-contact #how-to-arrive div p {
-  font-size: 18px;
+#form-contact #how-to-arrive div div img:first-child {
+  left: 230px;
+}
+#form-contact #how-to-arrive div div img:last-child {
+  left: 50px;
+}
+#form-contact #how-to-arrive div div span {
+  position: absolute;
+  font-size: 16px;
   align-items: center;
   justify-content: center;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   color: var(--gray);
+  margin-top: 5px;
 }
-#form-contact #how-to-arrive div p strong {
-  font-size: 16px;
+#form-contact #how-to-arrive div div span:first-child {
+  left: 10px;
+}
+#form-contact #how-to-arrive div div span small {
+  font-size: 12px;
   font-weight: 400;
 }
 #form-contact #google-map {
@@ -614,6 +825,19 @@ hr.divider {
   padding: 0;
 }
 
+@media (min-width: 1380px) {
+  #form-contact {
+    flex-direction: row;
+  }
+  #form-contact form h2 {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    margin: 100px var(--dspace);
+  }
+}
 #footer {
   width: 100%;
   height: 305px;
@@ -694,6 +918,7 @@ hr.divider {
 #about {
   flex-direction: column;
   width: 250%;
+  z-index: 1;
 }
 #about img {
   width: 100%;
@@ -747,6 +972,158 @@ hr.divider {
 
 #profile {
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#profile section {
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 92px;
+}
+#profile section > a img {
+  width: 150px;
+}
+#profile section .auth {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  color: var(--orange-100);
+}
+#profile section .auth h1 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 10px;
+}
+#profile section .auth hr {
+  width: 60px;
+  border: none;
+  border-top: var(--yellow) 2px solid;
+  margin-bottom: 30px;
+}
+#profile section .auth .field {
+  flex-direction: column;
+  margin: var(--mspace);
+  height: 70px;
+  border: 1px var(--gray) solid;
+  position: relative;
+}
+#profile section .auth .field input {
+  width: 95%;
+  border: none;
+  position: absolute;
+  top: 35px;
+  left: 10px;
+  font-size: 20px;
+  color: var(--black);
+}
+#profile section .auth .field label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 16px;
+  color: var(--gray);
+}
+#profile section .actions {
+  flex-direction: column;
+  align-items: center;
+}
+#profile section .actions .action {
+  margin-top: 70px;
+}
+#profile section .actions .action a {
+  min-width: 150px;
+  width: 200px;
+  border: none;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--bg-color);
+  background-color: var(--green-90);
+  color: var(--white);
+  margin-top: 70px;
+  align-items: center;
+}
+#profile section .actions .action a:hover {
+  background-color: var(--green-100);
+}
+#profile section .actions .action a:active {
+  background-color: var(--green-50);
+}
+#profile section .actions .action a:hover {
+  background-color: var(--green-hv);
+}
+#profile section .actions .action a:active {
+  background-color: var(--green-act);
+}
+#profile section .actions .action a:last-child {
+  margin-top: 0;
+}
+#profile section .actions span {
+  font-size: 16px;
+  align-items: center;
+  color: var(--gray);
+  margin-top: 70px;
+}
+#profile .forget {
+  display: none;
+  width: 100%;
+  margin: var(--mspace);
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+}
+#profile .forget h1 {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--orange-100);
+  text-align: center;
+  margin-bottom: 10px;
+}
+#profile .forget hr {
+  border: none;
+  width: 60px;
+  border-top: var(--yellow) 2px solid;
+  margin-bottom: 30px;
+}
+#profile .forget .forget-message {
+  height: 50px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  margin: var(--mspace);
+  border-top: var(--green-100) 1px solid;
+  border-bottom: var(--green-100) 1px solid;
+}
+#profile .forget .forget-message img {
+  margin-right: 10px;
+}
+#profile .forget .forget-message span {
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: center;
+  color: var(--green-100);
+}
+#profile p {
+  margin-top: 100px;
+}
+#profile .hide {
+  display: none;
 }
 
 #error {

@@ -45,7 +45,6 @@
         background-color: var(--orange-act);
     }
 }
-
 @mixin mtitle {
     color: var(--gray);
     text-transform: uppercase;
@@ -53,4 +52,12 @@
     font-weight: 400;
     text-align: center;
     margin: 40px 0
+}
+@mixin dtitle {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    margin: 100px var(--dspace);
 }

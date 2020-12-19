@@ -10,7 +10,7 @@
         position: absolute;
         width: 150px;
         top: 48px;
-        right: calc(50vw - 75px);
+        left: calc(50vw - 75px);
         z-index: 3;
     }
     button {
@@ -19,14 +19,15 @@
         outline: none;
         padding: var(--mspace);
     }
-    #btn-open, #btn-close {
+    #open-btn, #close-btn {
         position: absolute;
         margin-top: 16px;
         right: 10px;
         padding: var(--mspace);
     }
-    #btn-close {
+    #close-btn {
         display: none;
+        z-index: 4;
     }
     .menu {
         transition: top 1s ease-in-out;
@@ -71,7 +72,7 @@
             }
         }
         .footer {
-            display: none;
+            display: flex;
             position: absolute;
             bottom: 30px;
             flex-direction: column;
@@ -89,8 +90,9 @@
                 align-items: center;
                 margin-top: 20px;
                 margin: var(--mspace);
+                width: min-content;
                 picture {
-                    margin: var(--mspace);
+                    padding: var(--mspace);
                     width: 40px;
                 }
                 display: flex;
@@ -100,6 +102,7 @@
                     align-items: center;
                     flex: 1;
                     a {
+                        margin: 0 40px 0 20px;
                         flex-direction: column;
                     }
                 }
@@ -119,7 +122,7 @@
         #open-btn {
             display: none;
         }
-        #btn-close {
+        #close-btn {
             display: flex;
             z-index: 3;
         }
@@ -142,11 +145,75 @@
             nav {
                 ul {
                     li {
-                        &.logged-hide {
+                        &#logged-hide {
                             display: none;
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    #header {
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--red);
+        height: 113px;
+        position: relative;
+        .logomix {
+            transition: all 1s ease-in-out;
+            position: absolute;
+            width: 250px;
+            left: 15px;
+            top: 40px;
+            z-index: 3;
+        }
+        #open-btn, #close-btn {
+            display: none;
+        }
+        
+        .menu {
+            top: initial;
+            position: static;
+            width: 100%;
+            height: 113px;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 0;
+            nav {
+                width: 100%;
+                position: initial;
+                margin-left: 300px;
+                justify-content: center;
+                
+                ul {
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    li {
+                        margin-top: 0;
+                        a {
+                            font-size: 24px ;
+                            font-weight: 400;
+                            min-width: 160px;
+                            padding: var(--mspace) 0;
+                            text-align: center;
+                            &:hover {
+                                color: var(--orange-100);
+                            }
+                        }
+                    }
+                }
+            }
+            .footer {
+                position: initial;
+                hr {
+                    display: none;
+                }
+
             }
         }
     }
