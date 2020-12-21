@@ -29,15 +29,13 @@
         }
     }
     #contact {
-        flex-direction: column;
-        font-family: EBGaramond;
         padding: 0 var(--mspace);
+        align-items: flex-end;
         ul {
             width: 100%;
             margin: 0;
             padding: 0;
             flex-direction: column;
-
             #title {
                 font-size: 20px;
                 text-transform: uppercase;
@@ -51,29 +49,35 @@
                 color: var(--white);
                 font-weight: 600;
                 // margin-bottom: 5px;
-                img {
-                    margin: 0;
-                    flex-direction: row;
-                    margin-right: 10px;
-                }
             }
         }
-        #white-logo {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-            flex-direction: column;
+        div {
+            align-self: center;
+            margin-top: 64px;
+            img {
+                margin-right: 5px;
+            }
+        }
+    }
+    #white-logo {
+        width: 100%;
+        margin-top: 35px;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        a {
+            align-items: center;
             justify-content: center;
             img {
                 margin-top: 15px;
             }
-            p {
-                font-family: EBGaramond;
-                font-size: 18px;
-                color: var(--white);
-                justify-content: center;
-                text-align: center;
-            }
+        }
+        p {
+            font-family: EBGaramond;
+            font-size: 18px;
+            color: var(--white);
+            justify-content: center;
+            text-align: center;
         }
     }
 }
