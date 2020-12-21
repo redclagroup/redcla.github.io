@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,133 +24,190 @@
         <meta name="description" content="Conheça Mix Flavors do Rio de Janeiro" />
         <link rel="stylesheet" href="/assets/css/main.css">
     </head>
-<body>
+    <body>
+        <!-- HEADER -->
+        <header id="header">
+            <a href="index.html#home">
+                <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
+            </a>
+            <button id="open-btn">
+                <img src="assets/images/menu.svg" alt="Menu" />
+            </button>
+            <button id="close-btn">
+                <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
+            </button>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="about.html">Quem Somos</a></li>
+                        <li><a href="menu.html">Cardápio</a></li>    
+                        <li><a href="order.html">Pedido Online</a></li>
+                        <li><a href="index.html#form-contact">Contato</a></li>
+                        <li id="logged-hide"><a href="profile.html">Minha Conta</a></li>
+                    </ul>
+                </nav>
+                <div class="footer">
+                    <hr />
+                    <div>
+                        <picture>
+                            <a href="profile.html">
+                                <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                            </a>
+                        </picture>
+                        <div>
+                            <a href="profile.html">
+                                <strong>João da Silva<br /></strong></strong>
+                                <small>joaodasilva@gmail.com</small>
+                            </a>
+                        </div>
+                        <button type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
+                        </button>
+                    </div>
+     
+                </div>
+            </div>
+        </header> <!-- end header-->
     <main id="auth">
- 
          <section>
-             <a href="index.html"><img src="assets/images/ferrari-logo.svg" alt="Ferrari Logo" /></a>
+
+            <form class="hide">
+                <h1>Fazer Login</h1>
+                <hr />
+
+                <div class="field">
+                    <input type="email" name="email" id="email" />
+                    <label for="email">E-mail</label>
+                </div>
+
+                <div class="action">
+                    <a href="auth.html#register" class="link">Continuar</a>
+                    <span>Novo na Mix Flavor</span>
+                    <a href="auth.html#register" class="link">Crie sua conta</a>
+                </div>
+            </form>
  
-             <form class="hide">
-                 <h1>Autenticação</h1>
-                 <hr />
+            <form class="hide">
+                <h1>Redefinir Senha</h1>
+                <hr />
+
+                <div class="field">
+                    <input type="password" name="password" id="password" />
+                    <label for="password">Nova Senha</label>
+                </div>
+                <div class="field">
+                    <input type="password" name="password" id="password" />
+                    <label for="password">Confirme a Senha</label>
+                </div>
+
+
+                <div class="actions">
+                    <div class="action">
+                        <a href="auth.html#register" class="link">Redefinir</a>
+                    </div>
+                </div>
  
-                 <div class="field">
-                     <input type="email" name="email" id="email" />
-                     <label for="email">E-mail</label>
-                 </div>
+        </form>
  
-                 <div class="actions">
-                     <a href="auth.html#register" class="link">Criar uma Conta</a>
-                     <button type="submit">Próxima</button>
-                 </div>
+        <form class="auth" >
+                <h1>Criar conta</h1>
+                <hr />
+
+            <div class="field">
+                <input type="text" name="name" id="name" />
+                <label for="name">Nome Completo</label>
+            </div>
+
+                <div class="field">
+                    <input type="email" name="email" id="email-register" />
+                    <label for="email-register">E-mail</label>
+                </div>
+                
+                <div class="field">
+                <input type="text" name="Documento" id="Document" />
+                <label for="Document">Documento</label>
+            </div>
+                
+                <div class="field">
+                <input type="tel" name="phone" id="phone" />
+                <label for="phone">Telefone</label>
+            </div>
+
+                <div class="field">
+                    <input type="text" name="name" id="name" />
+                    <label for="name">Nome Completo</label>
+                </div>
+                
+                <div class="field">
+                    <input type="date" name="birth_at" id="birth_at" />
+                    <label for="birth_at">Data de Nascimento</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password_new" />
+                    <label for="password_new">Crie uma Senha</label>
+                </div>
+
+                <div class="field">
+                    <input type="password" name="password" id="password_confirm" />
+                    <label for="password_confirm">Confirme a Senha</label>
+                </div>
+
+                <div class="actions">
+                    <div class="action">
+                        <a href="auth.html#login" class="link">Cadastrar</a>
+                    </div>
+                    
+                </div>
+
+        </form>
  
-             </form>
- 
-             <form class="hide">
-                 <h1>Fazer login</h1>
-                 <hr />
- 
-                 <div class="field">
-                     <input type="email" name="email" id="email-login" readonly value="joao@hcode.com.br"/>
-                     <label for="email-login">E-mail</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password" />
-                     <label for="password">Digite sua Senha</label>
-                 </div>
- 
-                 <div class="actions">
-                     <div>
-                         <a href="auth.html#forget" class="link">Esqueceu sua senha?</a>
-                         <a href="auth.html" class="link">Este não é o seu e-mail?</a>
-                     </div>
- 
-                     <button type="submit">Login</button>
-                 </div>
- 
-             </form>
- 
-             <form class="hide" >
-                 <h1>Criar conta</h1>
-                 <hr />
- 
-                 <div class="field">
-                     <input type="email" name="email" id="email-register" value="joaodasilva@gmail.com"/>
-                     <label for="email-register">E-mail</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="text" name="name" id="name" />
-                     <label for="name">Nome Completo</label>
-                 </div>
-                 
-                 <div class="field">
-                     <input type="date" name="birth_at" id="birth_at" />
-                     <label for="birth_at">Data de Nascimento</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_new" />
-                     <label for="password_new">Crie uma Senha</label>
-                 </div>
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_confirm" />
-                     <label for="password_confirm">Confirme a Senha</label>
-                 </div>
- 
-                 <div class="actions">
-                     
-                     <a href="auth.html#login" class="link">Já tem uma conta?</a>
-                     
-                     <button type="submit">Cadastrar</button>
-                 </div>
- 
-             </form>
- 
-             <form class="" >
-                 <h1>Esqueci a senha</h1>
-                 <hr />
- 
-                 <div class="loading-wrap">
-                     <div class="loading">
-                         <div></div>
-                         <div></div>
-                         <div></div>
-                         <div></div>
-                     </div>
-                     <p>Por favor, aguarde...</p>
-                 </div>
- 
-                 <div class="message">
-                     <img src="assets/images/check-circle.svg" alt="Ok" />
-                     <span>Verifique as instruções no seu e-mail</span>
-                 </div>
-             
- 
-             </form>
- 
-             <form class="forget hide">
-                 <h1>Redefinir senha</h1>
-                 <hr />
- 
-                 <div class="field">
-                     <input type="password" name="password" id="password_reset" />
-                     <label for="password_reset">Digite sua Senha</label>
-                 </div>
- 
-                 <div class="actions">
-                     <button type="submit">Redefinir</button>
-                 </div>
- 
-             </form>
- 
- 
-             <p>©2023 por Hcode Lab. Orgulhosamente criado pelo Grupo Red Clan</p>
+        <form class="forget" >
+            <h1>Esqueci a senha</h1>
+            <hr />
+            <div class="forget-message">
+                <img src="assets/images/close_button_green.svg" alt="Botão Fechar">
+                <span>Veja as instruções no seu e-mail</span>
+            </div>
+
+
+            </form>
+
+            <form class=" hide">
+                <h1>Redefinir senha</h1>
+                <hr />
+
+                <div class="field">
+                    <input type="password" name="password" id="password_reset" />
+                    <label for="password_reset">Digite sua Senha</label>
+                </div>
+
+                <div class="actions">
+                    <button type="submit">Redefinir</button>
+                </div>
+
+            </form>
+
+
+            <p>©2023 por Hcode Lab - Red Clan Group</p>
          </section>    
      
     </main>  
- 
+
+    <script>
+        const btnOpen = document.querySelector('#open-btn');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        );
+        const btnClose = document.querySelector('#close-btn');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        )
+    </script>
  </body>
 </html>

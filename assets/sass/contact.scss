@@ -1,4 +1,5 @@
 #form-contact {
+
     flex-direction: column;
     form {
         flex-direction: column;
@@ -56,30 +57,45 @@
         margin-bottom: 50px;
     }
     #how-to-arrive {
-        height: 110px;
-        position: relative;
-        margin-bottom: 20px;
-        justify-content: space-around;
         div {
             flex-direction: column;
-            align-items: center;
-            justify-content: flex-end;
-            img {
-                justify-content: center;
-                width: 35px;
-                top: 10px;
-            }
-            p {
-                font-size: 18px;
-                align-items: center;
-                justify-content: center;
-                text-align: center;
-                text-transform: uppercase;
-                font-weight: 600;
-                color: var(--gray);
-                strong {
+            div {
+                position: relative;
+                margin: 0 25px;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: flex-start;
+                justify-content: flex-start;
+                img {
+                    position: relative;
+                    justify-content: flex-start;
+                    width: 35px;
+                    top: 10px;
+                    &:first-child {
+                        left: 230px;
+                    }
+                    &:last-child {
+                        left: 50px;
+                    }
+                }
+                span {
+                    position: absolute;
+                    &:first-child {
+                        left: 10px;
+
+                    }
                     font-size: 16px;
-                    font-weight: 400;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    color: var(--gray);
+                    margin-top: 5px;
+                    small {
+                        font-size: 12px;
+                        font-weight: 400;
+                    }
                 }
             }
         }
@@ -88,5 +104,16 @@
         width: 100%;
         margin: 0;
         padding: 0;
+    }
+}
+
+@media (min-width: 1380px) {
+    #form-contact {
+        flex-direction: row;
+        form {
+            h2 {
+                @include dtitle
+            }
+        }
     }
 }

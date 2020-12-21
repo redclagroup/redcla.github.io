@@ -27,10 +27,10 @@
     background-color: var(--green-90);
     color: var(--white);
     &:hover {
-        background-color: var(--green-50);
+        background-color: var(--green-hv);
     }
     &:active {
-        background-color: var(--green-100);                            
+        background-color: var(--green-act);                            
     }
 }
 
@@ -39,13 +39,12 @@
     background-color: var(--orange-100);
     color: var(--white);
     &:hover {
-        background-color: var(--orange-70);
+        background-color: var(--orange-hv);
     }
     &:active {
-        background-color: var(--orange-90);
+        background-color: var(--orange-act);
     }
 }
-
 @mixin mtitle {
     color: var(--gray);
     text-transform: uppercase;
@@ -53,4 +52,12 @@
     font-weight: 400;
     text-align: center;
     margin: 40px 0
+}
+@mixin dtitle {
+    color: var(--gray);
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: 400;
+    text-align: left;
+    margin: 100px var(--dspace);
 }

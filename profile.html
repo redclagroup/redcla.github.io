@@ -24,125 +24,124 @@
 </head>
 <body>
     
-    <header id="header">
-
-        <div class="overlay"></div>
-        <a href="index.html#home"><img src="assets/images/ferrari-logo.svg" class="logo" alt="Logo Ferrari" /></a>
-        <button type="button" id="btn-open">
-            <svg id="menu-black-18dp" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-                <path id="Caminho_215" data-name="Caminho 215" d="M0,0H32V32H0Z" fill="none"/>
-                <path id="Caminho_216" data-name="Caminho 216" d="M3,18H29V16H3Zm0-5H29V11H3ZM3,6V8H29V6Z" transform="translate(0 4)"/>
-            </svg>
+     <!-- HEADER -->
+     <header id="header">
+        <a href="index.html#home">
+            <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
+        </a>
+        <button id="open-btn">
+            <img src="assets/images/menu.svg" alt="Menu" />
+        </button>
+        <button id="close-btn">
+            <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
         </button>
         <div class="menu">
             <nav>
-                <button type="button" id="btn-close">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M19,6.41,17.59,5,12,10.59,6.41,5,5,6.41,10.59,12,5,17.59,6.41,19,12,13.41,17.59,19,19,17.59,13.41,12Z"/></svg>
-                </button>
                 <ul>
                     <li><a href="index.html#home">Home</a></li>
-                    <li><a href="index.html#service">Revisão</a></li>
-                    <li><a href="index.html#contact">Contato</a></li>
-                    <li class="divider"><hr /></li>
-                    <li class="hide-guest"><a href="schedules.html">Agendamentos</a></li>
-                    <li class="hide-guest"><a href="profile.html">Editar Dados</a></li>
-                    <li class="hide-guest"><a href="change-photo.html">Mudar Foto</a></li>
-                    <li class="hide-guest"><a href="change-password.html">Alterar Senha</a></li>
+                    <li><a href="about.html">Quem Somos</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>    
+                    <li><a href="order.html">Pedido Online</a></li>
+                    <li><a href="index.html#form-contact">Contato</a></li>
+                    <li id="logged-hide"><a href="profile.html">Minha Conta</a></li>
                 </ul>
             </nav>
             <div class="footer">
                 <hr />
                 <div>
                     <picture>
-                        <a href="profile.html"><img src="assets/images/user.png" alt="João Silva" /></a>
+                        <a href="profile.html">
+                            <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                        </a>
                     </picture>
                     <div>
                         <a href="profile.html">
-                            <strong>João Silva</strong>
-                            <small>joaosilva@gmail.com</small>
+                            <strong>João da Silva<br /></strong></strong>
+                            <small>joaodasilva@gmail.com</small>
                         </a>
                     </div>
                     <button type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#333"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
                     </button>
                 </div>
-                <a href="auth.html" class="btn-register">Minha Conta</a>
+ 
             </div>
         </div>
-        <hr class="italy" />
-    </header>
+    </header> <!-- end header-->
 
     <section class="page" id="profile">
-        
-        <header>
-            <h1>Editar Dados</h1>
-        </header>
-
-        <main>
-
-            <header class="page-title">
-                <h2>Dados Pessoais</h2>
+        <section>
+            <form class="auth" >
+                <h1>Alterar Dados</h1>
                 <hr />
-            </header>
 
-            <form>
-
-                <div class="field">
-                    <input type="text" name="name" id="name" value="Djalma" />
-                    <label for="name">Nome Completo</label>
-                </div>
+            <div class="field">
+                <input type="text" name="name" id="name" />
+                <label for="name">Nome Completo</label>
+            </div>
 
                 <div class="field">
-                    <input type="email" name="email" id="email" />
-                    <label for="email">E-mail</label>
-                </div>
-
-                <div class="field">
-                    <input type="date" name="birth_at" id="birth_at" />
-                    <label for="birth_at">Data de Nascimento</label>
-                </div>
-
-                <div class="fields">
-
-                    <div class="field">
-                        <input type="text" name="document" id="document" />
-                        <label for="document">Documento</label>
-                    </div>
-
-                    <div class="field">
-                        <input type="tel" name="phone" id="phone" />
-                        <label for="phone">Telefone</label>
-                    </div>
-                    
-                    <div class="field">
-                        <input type="password" name="password" id="password_new" />
-                        <label for="password_new">Crie uma Senha</label>
-                    </div>
-    
-                    <div class="field">
-                        <input type="password" name="password" id="password_confirm" />
-                        <label for="password_confirm">Confirme a Senha</label>
-                    </div>
-
-                </div>
-
-                <div class="toast success open">
-                    Dados salvos com sucesso!
-                    <button type="button" class="close">
-                        <span>&times;</span>
-                    </button>
+                    <input type="email" name="email" id="email-register" />
+                    <label for="email-register">E-mail</label>
                 </div>
                 
-                <footer class="fixed">
-    
-                    <button type="submit">Salvar</button>
-    
-                </footer>
-            </form>
+                <div class="field">
+                <input type="text" name="Documento" id="Document" />
+                <label for="Document">Documento</label>
+            </div>
+                
+                <div class="field">
+                <input type="tel" name="phone" id="phone" />
+                <label for="phone">Telefone</label>
+            </div>
+                <div class="actions">
+                    <div class="action">
+                        <a href="auth.html#login" class="link">Alterar</a>
+                    </div>
+                </div>
+
+        </form>
+        </section>
+        
 
         </main>        
 
     </section>
-
+    <!-- FOOTER -->
+    <footer id="footer">
+        <button type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+        </button>
+        <div id="contact">
+            <ul>
+                <li id="title">Contato</li>
+                <li>(21) 3456-7890</li>
+                <li>info@mixflavors.com.br</li>
+                <li>
+                    <img src="/assets/images/instagram.svg" alt="Instagram">
+                    <img src="/assets/images/facebook.svg" alt="Facebook">
+                    <img src="/assets/images/twitter.svg" alt="Twitter">
+                </li>
+            </ul>
+            <div id="white-logo">
+                <img  src="assets/images/Logomix-total-white.svg" alt="Faca Branca">
+                <p>©2023 por Hcode Lab - Red Clan Group</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const btnOpen = document.querySelector('#open-btn');
+          btnOpen.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        );
+        const btnClose = document.querySelector('#close-btn');
+          btnClose.addEventListener('click', e=> {
+            const header = document.querySelector('body');
+            header.classList.toggle('opened-menu');
+          }
+        )
+    </script>
 </body>
 </html>
