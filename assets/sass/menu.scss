@@ -1,17 +1,124 @@
 #menu {
     flex-direction: column;
-    .section-menu {
+    background-color: var(--brown-50);
+    
+    > section {
         flex-direction: column;
-    }
-    .items-section{
-        flex-direction: column;
-        .item-menu{
-            flex-direction:line;
-            .line-menu{
-                align-items: center;
-                width: 380px;
-                overflow: hidden;
+        margin-left:var(--mspace);
+        margin-right:var(--mspace);
+        header {
+            flex-direction: column;
+            font-size: 45px;
+            color: var(--brown-100);
+            h1 {
+                flex-direction: column;
+                font-size:45px;
+            }
+            div {
+                background-color: var(--orange-100);
+                height: 3px;
+                width: calc(100% - var(--mspace));
+                border: none;
+                align-self: center;
             }
         }
+        .section-menu {
+            flex-direction: column;
+            .title {
+                margin-top: var(--mspace);    
+                background-color: var(--orange-50);
+                height: 60px;
+                h2 {
+                    font-size: 23px;
+                    color: var(--red);
+                    margin-left: var(--mspace);
+                }
+            }
+            > p {
+                font-size: 15px;
+                margin-top: 30px;
+                margin-bottom: 45px;
+            }
+            
+        }
+        .items-section {
+            flex-direction: column;
+            
+            .item-menu {
+                flex-direction:column;
+                width: calc(100% - var(--mspace));
+                margin-bottom: 5px;
+                h3 {
+                    svg {
+                        margin-left:var(--mspace);
+                        
+                    }
+                    flex-direction: column;
+                    margin: -10px;  
+                }
+                .description-item{
+                    margin: 0;
+                }
+                hr {
+                    background-color: var(--red);
+                    height: 1px;
+                    width: calc(100% - var(--mspace));
+                    border: none;
+                    right: var(--mspace); 
+                }
+                h4 {
+                    text-align: right;
+                }
+                .line-menu{
+                    align-items: center;
+                    width: 380px;
+                    overflow: hidden;
+                }
+            }
+        }
+
+    }
+    .divisor {
+        display: none;
+    }
+}
+@media (min-width: 1200px) {
+    #menu{
+        flex-direction: row;
+        background-image: url(/assets/images/menu_tomato_bread.webp);
+        max-height: initial;
+        background-position-x:80%;
+        background-position-y: top;
+        > section {
+            margin-top: 115px;
+            margin-bottom: 115px;
+            background-color: var(--brown-50);
+            width: calc((100vw - 50%));
+            margin-left:var(--dspace);
+            header {
+                margin-left: var(--mspace);
+            }
+            .section-menu {
+                .title {
+                    margin-left: var(--mspace);
+                    margin-right: var(--mspace);
+                    h2 {
+                        margin-left: var(--mspace);
+                        margin-right: var(--mspace);
+                    }
+                }
+                > p {
+                    margin-left: var(--mspace);
+                    margin-right: var(--mspace);
+                }
+            }
+            .items-section {  
+                .item-menu {
+                    margin-left: var(--mspace);
+                    margin-right: var(--mspace);
+                }
+            }
+        }
+
     }
 }
