@@ -2,27 +2,28 @@
     flex-direction: column;
     min-width: 320px;
     width: 100%;
-
-    #main-photos {
-        display: flex;
+    display: flex;
+    flex-direction: column;
+    .photo {
         flex-direction: column;
-        width: 100%;
+        align-items: flex-end;
         img {
             width: 100%;
         }
         h1 {
+            width: 70%;
             font-family: JosefinSans;
             font-size: 28px;
             font-weight: 600;
             color: var(--white);
             text-align: center;
-            margin-top: -70px;
+            margin-top: -79px;
         }
     }
     > h2 {
         @include mtitle;
         margin: 10px 0;
-        justify-content: center;
+        justify-self: left;
     }
 
     #our-menu {
@@ -38,13 +39,15 @@
                 width: 100vw;
                 height: 128px;
                 background-color: var(--red);
-                margin: var(--mspace);
+                margin-bottom: var(--mspace);
                 padding: var(--mspace);
+                justify-content: center;
                 align-items: center;
                 .menu-title {
                     flex-direction: column;
                     width: 30%;
                     justify-content: center;
+                    align-items: center;
                     > hr {
                         border: 0;
                         padding: 0;
@@ -53,8 +56,7 @@
                         align-self: center;
                     }
                     h3 {
-                        margin-left: 18px;
-                        width: 30%;
+                        margin-top: 20px;
                         text-transform: uppercase;
                         color: var(--white);
                         a {
@@ -90,23 +92,22 @@
         }
     }
 }
-@media (min-width: 1380px) {
+@media (min-width: 1200px) {
     #home {
         position: initial;
-        #main-photos {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
+        display: flex;
+        width: 100%;
+        .photo {
             > img {
-                position: absolute;
                 margin-top: -330px;
             }
             h1 {
+                margin: 0;
+                margin-top: -325px;
+                margin-bottom: 125px;
+                align-self: flex-end;
                 font-size: 100px;
-                margin-bottom: 0                                           ;
                 width: 50%;
-                margin-top: 600px;
-                margin-bottom: 140px;
                 align-self: flex-end;
                 z-index: 2;
             }
@@ -117,6 +118,7 @@
         }
 
         #our-menu {
+            top: 0;
             width: 100%;
             align-items: center;
             justify-content: center;
@@ -133,6 +135,7 @@
                     justify-content: center;
                     position: initial;
                     width: 100%;
+                    margin: 20px;
                     .menu-title {
                         > hr {
                             margin-top: 55px;

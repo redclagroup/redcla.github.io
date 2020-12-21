@@ -9,6 +9,7 @@
     background-color: var(--brown-100);
     z-index: 1;
     button {
+        transition: bottom 1s ease-in-out;
         position: absolute;
         right: var(--mspace);
         background-color: var(--orange-50);

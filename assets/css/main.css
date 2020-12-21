@@ -276,9 +276,9 @@ hr.divider {
     margin-top: 0;
   }
   #header .menu nav ul li a {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 400;
-    min-width: 160px;
+    min-width: 140px;
     padding: var(--mspace) 0;
     text-align: center;
   }
@@ -296,22 +296,24 @@ hr.divider {
   flex-direction: column;
   min-width: 320px;
   width: 100%;
-}
-#home #main-photos {
   display: flex;
   flex-direction: column;
+}
+#home .photo {
+  flex-direction: column;
+  align-items: flex-end;
+}
+#home .photo img {
   width: 100%;
 }
-#home #main-photos img {
-  width: 100%;
-}
-#home #main-photos h1 {
+#home .photo h1 {
+  width: 70%;
   font-family: JosefinSans;
   font-size: 28px;
   font-weight: 600;
   color: var(--white);
   text-align: center;
-  margin-top: -70px;
+  margin-top: -79px;
 }
 #home > h2 {
   color: var(--gray);
@@ -321,7 +323,7 @@ hr.divider {
   text-align: center;
   margin: 40px 0;
   margin: 10px 0;
-  justify-content: center;
+  justify-self: left;
 }
 #home #our-menu {
   flex-direction: column;
@@ -338,14 +340,16 @@ hr.divider {
   width: 100vw;
   height: 128px;
   background-color: var(--red);
-  margin: var(--mspace);
+  margin-bottom: var(--mspace);
   padding: var(--mspace);
+  justify-content: center;
   align-items: center;
 }
 #home #our-menu .our-menus .in-menu .menu-title {
   flex-direction: column;
   width: 30%;
   justify-content: center;
+  align-items: center;
 }
 #home #our-menu .our-menus .in-menu .menu-title > hr {
   border: 0;
@@ -355,8 +359,7 @@ hr.divider {
   align-self: center;
 }
 #home #our-menu .our-menus .in-menu .menu-title h3 {
-  margin-left: 18px;
-  width: 30%;
+  margin-top: 20px;
   text-transform: uppercase;
   color: var(--white);
 }
@@ -414,25 +417,22 @@ hr.divider {
   background-color: var(--green-act);
 }
 
-@media (min-width: 1380px) {
+@media (min-width: 1200px) {
   #home {
     position: initial;
-  }
-  #home #main-photos {
     display: flex;
     width: 100%;
-    flex-direction: column;
   }
-  #home #main-photos > img {
-    position: absolute;
+  #home .photo > img {
     margin-top: -330px;
   }
-  #home #main-photos h1 {
+  #home .photo h1 {
+    margin: 0;
+    margin-top: -325px;
+    margin-bottom: 125px;
+    align-self: flex-end;
     font-size: 100px;
-    margin-bottom: 0;
     width: 50%;
-    margin-top: 600px;
-    margin-bottom: 140px;
     align-self: flex-end;
     z-index: 2;
   }
@@ -445,6 +445,7 @@ hr.divider {
     margin: 100px var(--dspace);
   }
   #home #our-menu {
+    top: 0;
     width: 100%;
     align-items: center;
     justify-content: center;
@@ -463,6 +464,7 @@ hr.divider {
     justify-content: center;
     position: initial;
     width: 100%;
+    margin: 20px;
   }
   #home #our-menu .our-menus .in-menu .menu-title > hr {
     margin-top: 55px;
@@ -718,14 +720,13 @@ hr.divider {
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: 70px;
   margin-bottom: 10px;
 }
 #form-contact form .field label {
   font-size: 22px;
   color: var(--gray);
   position: absolute;
-  top: 10px;
+  top: 5px;
   bottom: 10px;
   left: 10px;
 }
@@ -733,17 +734,19 @@ hr.divider {
   height: 70px;
   border: var(--gray) 2px solid;
   line-height: 1.5em;
-  padding-bottom: 10px;
-  padding-left: 70px;
+  padding-left: 10px;
   background-color: transparent;
-  color: var(--white);
-  font-size: 16px;
+  color: var(--black);
+  font-size: 24px;
 }
-#form-contact form .field #message {
-  height: 250px;
+#form-contact form .field input.message, #form-contact form .field textarea.message, #form-contact form .field select.message {
+  height: 150px;
 }
-#form-contact form .field input, #form-contact form .field select {
-  color: transparent;
+#form-contact .how-to-arrive div div {
+  flex-direction: column;
+}
+#form-contact .how-to-arrive div div img {
+  width: 100%;
 }
 #form-contact a {
   min-width: 150px;
@@ -777,9 +780,6 @@ hr.divider {
 }
 #form-contact a:active {
   background-color: var(--green-act);
-}
-#form-contact #how-to-arrive div {
-  flex-direction: column;
 }
 #form-contact #how-to-arrive div div {
   position: relative;
@@ -850,6 +850,7 @@ hr.divider {
   z-index: 1;
 }
 #footer button {
+  transition: bottom 1s ease-in-out;
   position: absolute;
   right: var(--mspace);
   background-color: var(--orange-50);
