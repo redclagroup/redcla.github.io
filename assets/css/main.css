@@ -1271,11 +1271,9 @@ hr.divider {
 #menu > section .items-section .item-menu {
   flex-direction: column;
   width: calc(100% - var(--mspace));
-  margin-bottom: 5px;
 }
 #menu > section .items-section .item-menu h3 {
   flex-direction: column;
-  margin: -10px;
 }
 #menu > section .items-section .item-menu h3 svg {
   margin-left: var(--mspace);
@@ -1292,6 +1290,7 @@ hr.divider {
 }
 #menu > section .items-section .item-menu h4 {
   text-align: right;
+  margin-bottom: 30px;
 }
 #menu > section .items-section .item-menu .line-menu {
   align-items: center;
