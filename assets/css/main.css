@@ -984,10 +984,6 @@ hr.divider {
     text-align: justify;
     padding: 20px;
   }
-
-  #footer {
-    display: none;
-  }
 }
 #list-menu {
   flex-direction: column;
@@ -1344,38 +1340,39 @@ hr.divider {
 }
 
 @media (min-width: 1200px) {
-  #menu {
+  #list-menu {
     flex-direction: row;
     background-image: url(/assets/images/menu_tomato_bread.webp);
     max-height: initial;
     background-position-x: 80%;
     background-position-y: top;
     background-attachment: fixed;
+    width: 80%;
     width: 100%;
   }
-  #menu > section {
+  #list-menu > section {
     margin-top: 115px;
     margin-bottom: 115px;
-    background-color: var(--brown-50);
+    background-color: rgba(184, 148, 93, 0.5);
     width: calc((100vw - 50%));
     margin-left: var(--dspace);
   }
-  #menu > section header {
+  #list-menu > section header {
     margin-left: var(--mspace);
   }
-  #menu > section .section-menu .title {
-    margin-left: var(--mspace);
-    margin-right: var(--mspace);
-  }
-  #menu > section .section-menu .title h2 {
+  #list-menu > section .section-menu .title {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
-  #menu > section .section-menu > p {
+  #list-menu > section .section-menu .title h2 {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
-  #menu > section .items-section .item-menu {
+  #list-menu > section .section-menu > p {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #list-menu > section .items-section .item-menu {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
