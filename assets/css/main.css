@@ -44,6 +44,7 @@
   --brown-50: #F1C59D;
   --brown-100: #610802;
   --yellow: #F1C40F;
+  --brown-t: #b8945D;
   --orange-50: #F7DFC9;
   --orange-70: #F1C59D;
   --orange-90: #D47119;
@@ -919,12 +920,12 @@ hr.divider {
 
 #about {
   flex-direction: column;
-  width: 250%;
+  width: 100%;
   z-index: 1;
 }
 #about img {
-  width: 100%;
   top: 0;
+  width: 250vw;
   margin-left: -165px;
 }
 #about #content {
@@ -933,14 +934,14 @@ hr.divider {
   margin: 0;
   margin-top: -100px;
 }
-#about h1 {
+#about #content h1 {
   font-size: 28px;
   font-weight: 600;
   margin: 0;
   margin-left: var(--mspace);
   color: var(--white);
 }
-#about p {
+#about #content p {
   font-family: EBGaramond;
   font-size: 14px;
   width: 100%;
@@ -950,118 +951,158 @@ hr.divider {
   margin: 0;
   background-color: var(--orange-70);
 }
-#about p:last-child {
+#about #content p:last-child {
   padding-bottom: 50px;
 }
 
-#menu {
+@media (min-width: 1200px) {
+  #about {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+  }
+  #about img {
+    margin: 0;
+    margin-top: -220px;
+  }
+  #about #content {
+    position: absolute;
+    width: 420px;
+    top: 100px;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  #about #content h1 {
+    color: var(--orange-70);
+    margin-top: 60px;
+  }
+  #about #content p {
+    background-color: transparent;
+    font-size: 22px;
+    color: var(--white);
+    text-align: justify;
+    padding: 20px;
+  }
+
+  #footer {
+    display: none;
+  }
+}
+#list-menu {
   flex-direction: column;
   background-color: var(--brown-50);
-  flex-direction: column;
-  padding: 0 var(--mspace);
 }
-#menu header {
+#list-menu > section {
+  flex-direction: column;
+  margin-left: var(--mspace);
+  margin-right: var(--mspace);
+}
+#list-menu > section header {
   flex-direction: column;
   font-size: 45px;
   color: var(--brown-100);
 }
-#menu header h1 {
+#list-menu > section header h1 {
   flex-direction: column;
   font-size: 45px;
 }
-#menu header div {
+#list-menu > section header div {
   background-color: var(--orange-100);
   height: 3px;
   width: calc(100% - var(--mspace));
   border: none;
   align-self: center;
 }
-#menu .section-menu {
+#list-menu > section .section-menu {
   flex-direction: column;
 }
-#menu .section-menu .title {
+#list-menu > section .section-menu .title {
   margin-top: var(--mspace);
   background-color: var(--orange-50);
   height: 60px;
 }
-#menu .section-menu .title h2 {
+#list-menu > section .section-menu .title h2 {
   font-size: 23px;
   color: var(--red);
   margin-left: var(--mspace);
 }
-#menu .section-menu > p {
+#list-menu > section .section-menu > p {
   font-size: 15px;
   margin-top: 30px;
   margin-bottom: 45px;
 }
-#menu .items-section {
+#list-menu > section .items-section {
   flex-direction: column;
 }
-#menu .items-section .item-menu {
+#list-menu > section .items-section .item-menu {
   flex-direction: column;
   width: calc(100% - var(--mspace));
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
-#menu .items-section .item-menu h3 {
+#list-menu > section .items-section .item-menu h3 {
   flex-direction: column;
   margin: -10px;
 }
-#menu .items-section .item-menu h3 svg {
+#list-menu > section .items-section .item-menu h3 svg {
   margin-left: var(--mspace);
 }
-#menu .items-section .item-menu .description-item {
+#list-menu > section .items-section .item-menu .description-item {
   margin: 0;
 }
-#menu .items-section .item-menu hr {
+#list-menu > section .items-section .item-menu hr {
   background-color: var(--red);
   height: 1px;
   width: calc(100% - var(--mspace));
   border: none;
   right: var(--mspace);
 }
-#menu .items-section .item-menu h4 {
+#list-menu > section .items-section .item-menu h4 {
   text-align: right;
 }
-#menu .items-section .item-menu .line-menu {
+#list-menu > section .items-section .item-menu .line-menu {
   align-items: center;
   width: 380px;
   overflow: hidden;
 }
-#menu .divisor {
+#list-menu .divisor {
   display: none;
 }
 
 @media (min-width: 1200px) {
-  #menu {
+  #list-menu {
     flex-direction: row;
     background-image: url(/assets/images/menu_tomato_bread.webp);
     max-height: initial;
     background-position-x: 80%;
     background-position-y: top;
+    background-attachment: fixed;
+    width: 80%;
+    width: 100%;
   }
-  #menu > section {
+  #list-menu > section {
     margin-top: 115px;
     margin-bottom: 115px;
-    background-color: var(--brown-50);
+    background-color: rgba(184, 148, 93, 0.5);
     width: calc((100vw - 50%));
     margin-left: var(--dspace);
   }
-  #menu > section header {
+  #list-menu > section header {
     margin-left: var(--mspace);
   }
-  #menu > section .section-menu .title {
-    margin-left: var(--mspace);
-    margin-right: var(--mspace);
-  }
-  #menu > section .section-menu .title h2 {
+  #list-menu > section .section-menu .title {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
-  #menu > section .section-menu > p {
+  #list-menu > section .section-menu .title h2 {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
-  #menu > section .items-section .item-menu {
+  #list-menu > section .section-menu > p {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #list-menu > section .items-section .item-menu {
     margin-left: var(--mspace);
     margin-right: var(--mspace);
   }
@@ -1222,82 +1263,83 @@ hr.divider {
   display: none;
 }
 
-#menu {
+#list-menu {
   flex-direction: column;
   background-color: var(--brown-50);
 }
-#menu > section {
+#list-menu > section {
   flex-direction: column;
   margin-left: var(--mspace);
   margin-right: var(--mspace);
 }
-#menu > section header {
+#list-menu > section header {
   flex-direction: column;
   font-size: 45px;
   color: var(--brown-100);
 }
-#menu > section header h1 {
+#list-menu > section header h1 {
   flex-direction: column;
   font-size: 45px;
 }
-#menu > section header div {
+#list-menu > section header div {
   background-color: var(--orange-100);
   height: 3px;
   width: calc(100% - var(--mspace));
   border: none;
   align-self: center;
 }
-#menu > section .section-menu {
+#list-menu > section .section-menu {
   flex-direction: column;
 }
-#menu > section .section-menu .title {
+#list-menu > section .section-menu .title {
   margin-top: var(--mspace);
   background-color: var(--orange-50);
   height: 60px;
 }
-#menu > section .section-menu .title h2 {
+#list-menu > section .section-menu .title h2 {
   font-size: 23px;
   color: var(--red);
   margin-left: var(--mspace);
 }
-#menu > section .section-menu > p {
+#list-menu > section .section-menu > p {
   font-size: 15px;
   margin-top: 30px;
   margin-bottom: 45px;
 }
-#menu > section .items-section {
+#list-menu > section .items-section {
   flex-direction: column;
 }
-#menu > section .items-section .item-menu {
+#list-menu > section .items-section .item-menu {
   flex-direction: column;
   width: calc(100% - var(--mspace));
+  margin-bottom: 5px;
 }
-#menu > section .items-section .item-menu h3 {
+#list-menu > section .items-section .item-menu h3 {
   flex-direction: column;
+  margin: -10px;
 }
-#menu > section .items-section .item-menu h3 svg {
+#list-menu > section .items-section .item-menu h3 svg {
   margin-left: var(--mspace);
 }
-#menu > section .items-section .item-menu .description-item {
+#list-menu > section .items-section .item-menu .description-item {
   margin: 0;
 }
-#menu > section .items-section .item-menu hr {
+#list-menu > section .items-section .item-menu hr {
   background-color: var(--red);
   height: 1px;
   width: calc(100% - var(--mspace));
   border: none;
   right: var(--mspace);
 }
-#menu > section .items-section .item-menu h4 {
+#list-menu > section .items-section .item-menu h4 {
   text-align: right;
-  margin-bottom: 30px;
 }
-#menu > section .items-section .item-menu .line-menu {
+#list-menu > section .items-section .item-menu .line-menu {
   align-items: center;
   width: 380px;
   overflow: hidden;
 }
-#menu .divisor {
+#list-menu .divisor {
   display: none;
 }
 
@@ -1308,6 +1350,8 @@ hr.divider {
     max-height: initial;
     background-position-x: 80%;
     background-position-y: top;
+    background-attachment: fixed;
+    width: 100%;
   }
   #menu > section {
     margin-top: 115px;

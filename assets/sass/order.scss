@@ -1,4 +1,4 @@
-#menu {
+#list-menu {
     flex-direction: column;
     background-color: var(--brown-50);
     
@@ -47,12 +47,14 @@
             .item-menu {
                 flex-direction:column;
                 width: calc(100% - var(--mspace));
+                margin-bottom: 5px;
                 h3 {
-                    flex-direction: column;
                     svg {
                         margin-left:var(--mspace);
                         
                     }
+                    flex-direction: column;
+                    margin: -10px;  
                 }
                 .description-item{
                     margin: 0;
@@ -66,7 +68,6 @@
                 }
                 h4 {
                     text-align: right;
-                    margin-bottom: 30px;
                 }
                 .line-menu{
                     align-items: center;
@@ -88,6 +89,8 @@
         max-height: initial;
         background-position-x:80%;
         background-position-y: top;
+        background-attachment: fixed;
+        width: 100%;
         > section {
             margin-top: 115px;
             margin-bottom: 115px;
