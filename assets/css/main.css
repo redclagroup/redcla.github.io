@@ -955,22 +955,119 @@ hr.divider {
 
 #menu {
   flex-direction: column;
+  background-color: var(--brown-50);
 }
-#menu .section-menu {
+#menu > section {
+  flex-direction: column;
+  margin-left: var(--mspace);
+  margin-right: var(--mspace);
+}
+#menu > section header {
+  flex-direction: column;
+  font-size: 45px;
+  color: var(--brown-100);
+}
+#menu > section header h1 {
+  flex-direction: column;
+  font-size: 45px;
+}
+#menu > section header div {
+  background-color: var(--orange-100);
+  height: 3px;
+  width: calc(100% - var(--mspace));
+  border: none;
+  align-self: center;
+}
+#menu > section .section-menu {
   flex-direction: column;
 }
-#menu .items-section {
+#menu > section .section-menu .title {
+  margin-top: var(--mspace);
+  background-color: var(--orange-50);
+  height: 60px;
+}
+#menu > section .section-menu .title h2 {
+  font-size: 23px;
+  color: var(--red);
+  margin-left: var(--mspace);
+}
+#menu > section .section-menu > p {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+#menu > section .items-section {
   flex-direction: column;
 }
-#menu .items-section .item-menu {
-  flex-direction: line;
+#menu > section .items-section .item-menu {
+  flex-direction: column;
+  width: calc(100% - var(--mspace));
+  margin-bottom: 5px;
 }
-#menu .items-section .item-menu .line-menu {
+#menu > section .items-section .item-menu h3 {
+  flex-direction: column;
+  margin: -10px;
+}
+#menu > section .items-section .item-menu h3 svg {
+  margin-left: var(--mspace);
+}
+#menu > section .items-section .item-menu .description-item {
+  margin: 0;
+}
+#menu > section .items-section .item-menu hr {
+  background-color: var(--red);
+  height: 1px;
+  width: calc(100% - var(--mspace));
+  border: none;
+  right: var(--mspace);
+}
+#menu > section .items-section .item-menu h4 {
+  text-align: right;
+}
+#menu > section .items-section .item-menu .line-menu {
   align-items: center;
   width: 380px;
   overflow: hidden;
 }
+#menu .divisor {
+  display: none;
+}
 
+@media (min-width: 1200px) {
+  #menu {
+    flex-direction: row;
+    background-image: url(/assets/images/menu_tomato_bread.webp);
+    max-height: initial;
+    background-position-x: 80%;
+    background-position-y: top;
+  }
+  #menu > section {
+    margin-top: 115px;
+    margin-bottom: 115px;
+    background-color: var(--brown-50);
+    width: calc((100vw - 50%));
+    margin-left: var(--dspace);
+  }
+  #menu > section header {
+    margin-left: var(--mspace);
+  }
+  #menu > section .section-menu .title {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .section-menu .title h2 {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .section-menu > p {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .items-section .item-menu {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+}
 #profile {
   flex-direction: column;
   width: 100%;
@@ -1127,6 +1224,121 @@ hr.divider {
   display: none;
 }
 
+#menu {
+  flex-direction: column;
+  background-color: var(--brown-50);
+}
+#menu > section {
+  flex-direction: column;
+  margin-left: var(--mspace);
+  margin-right: var(--mspace);
+}
+#menu > section header {
+  flex-direction: column;
+  font-size: 45px;
+  color: var(--brown-100);
+}
+#menu > section header h1 {
+  flex-direction: column;
+  font-size: 45px;
+}
+#menu > section header div {
+  background-color: var(--orange-100);
+  height: 3px;
+  width: calc(100% - var(--mspace));
+  border: none;
+  align-self: center;
+}
+#menu > section .section-menu {
+  flex-direction: column;
+}
+#menu > section .section-menu .title {
+  margin-top: var(--mspace);
+  background-color: var(--orange-50);
+  height: 60px;
+}
+#menu > section .section-menu .title h2 {
+  font-size: 23px;
+  color: var(--red);
+  margin-left: var(--mspace);
+}
+#menu > section .section-menu > p {
+  font-size: 15px;
+  margin-top: 30px;
+  margin-bottom: 45px;
+}
+#menu > section .items-section {
+  flex-direction: column;
+}
+#menu > section .items-section .item-menu {
+  flex-direction: column;
+  width: calc(100% - var(--mspace));
+  margin-bottom: 5px;
+}
+#menu > section .items-section .item-menu h3 {
+  flex-direction: column;
+  margin: -10px;
+}
+#menu > section .items-section .item-menu h3 svg {
+  margin-left: var(--mspace);
+}
+#menu > section .items-section .item-menu .description-item {
+  margin: 0;
+}
+#menu > section .items-section .item-menu hr {
+  background-color: var(--red);
+  height: 1px;
+  width: calc(100% - var(--mspace));
+  border: none;
+  right: var(--mspace);
+}
+#menu > section .items-section .item-menu h4 {
+  text-align: right;
+}
+#menu > section .items-section .item-menu .line-menu {
+  align-items: center;
+  width: 380px;
+  overflow: hidden;
+}
+#menu .divisor {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  #menu {
+    flex-direction: row;
+    background-image: url(/assets/images/menu_tomato_bread.webp);
+    max-height: initial;
+    background-position-x: 80%;
+    background-position-y: top;
+  }
+  #menu > section {
+    margin-top: 115px;
+    margin-bottom: 115px;
+    background-color: var(--brown-50);
+    width: calc((100vw - 50%));
+    margin-left: var(--dspace);
+  }
+  #menu > section header {
+    margin-left: var(--mspace);
+  }
+  #menu > section .section-menu .title {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .section-menu .title h2 {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .section-menu > p {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+  #menu > section .items-section .item-menu {
+    margin-left: var(--mspace);
+    margin-right: var(--mspace);
+  }
+}
 #error {
   width: 100%;
   height: 77vh;

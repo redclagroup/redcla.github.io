@@ -26,35 +26,49 @@
 </head>
 <body>
     <!-- HEADER -->
-   <!--  <section class="header">
-        <div id="items-header">
-            <img class="menu-header" src="assets/images/menu.svg" alt="Menu">
-            <img class="top-logomix" src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors">
-        </div>
+    <header id="header">
+        <a href="index.html#home">
+            <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors" class="logomix" />
+        </a>
+        <button id="open-btn">
+            <img src="assets/images/menu.svg" alt="Menu" />
+        </button>
+        <button id="close-btn">
+            <img src="assets/images/close-btn-white.svg" alt="Botão Fechar" />
+        </button>
         <div class="menu">
-            <img class="menu-header" src="assets/images/close_button_white.svg" alt="Fecha menu">
-            <img src="assets/images/Logomix-shadow.svg" alt="Logo Mix Flavors">
-            <hr />
             <nav>
                 <ul>
-                    <li><a href="#">Quem Somos</a></li>
-                    <li><a href="#">Cardápio</a></li>    
-                    <li><a href="#">Pedido Online</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="index.html#header">Home</a></li>
+                    <li><a href="about.html">Quem Somos</a></li>
+                    <li><a href="menu.html">Cardápio</a></li>    
+                    <li><a href="order.html">Pedido Online</a></li>
+                    <li><a href="index.html#form-contact">Contato</a></li>
+                    <li id="logged-hide"><a href="profile.html">Minha Conta</a></li>
                 </ul>
             </nav>
-            <hr />
-            <div class="logged">
-                <img src="assets/images/user.svg" alt="">
-                <div class="profile">
-                    <strong>João da Silva</strong>
-                    <small>joaodasilva@gmail.com</small>
+            <div class="footer">
+                <hr />
+                <div>
+                    <picture>
+                        <a href="profile.html">
+                            <img src="assets/images/user.svg" alt="Imagem Usuário" />
+                        </a>
+                    </picture>
+                    <div>
+                        <a href="profile.html">
+                            <strong>João da Silva<br /></strong></strong>
+                            <small>joaodasilva@gmail.com</small>
+                        </a>
+                    </div>
+                    <button type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M0,0H24V24H0Z" fill="none"/><path d="M10.09,15.59,11.5,17l5-5-5-5L10.09,8.41,12.67,11H3v2h9.67ZM19,3H5A2,2,0,0,0,3,5V9H5V5H19V19H5V15H3v4a2,2,0,0,0,2,2H19a2.006,2.006,0,0,0,2-2V5A2.006,2.006,0,0,0,19,3Z" fill="#fff"/></svg>
+                    </button>
                 </div>
-                <img src="assets/images/user-into.svg" alt="Usuário">
+ 
             </div>
         </div>
-
-    </section> --> <!-- end header-->
+    </header> <!-- end header-->
     
     <section id="menu">
         <section>
@@ -251,8 +265,13 @@
         </section>
     </section>
     
-    <!-- FOOTER --> 
-   <!--  <footer id="footer">
+    <!-- FOOTER -->
+    <footer id="footer">
+        <button type="button">
+            <a href="index.html#header">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64.317" height="64.317" viewBox="0 0 64.317 64.317"><path d="M0,0H64.317V64.317H0Z" fill="none"/><path d="M9.779,27.858l12.3-12.274,12.3,12.274,3.779-3.779L22.079,8,6,24.079Z" transform="translate(10.079 13.439)"/></svg>
+            </a>
+        </button>
         <div id="contact">
             <ul>
                 <li id="title">Contato</li>
@@ -269,7 +288,7 @@
                 <p>©2023 por Hcode Lab - Red Clan Group</p>
             </div>
         </div>
-    </footer> -->
+    </footer>
     
 </body>
 </html>
