@@ -460,7 +460,7 @@ hr.divider {
     flex-direction: column;
     width: 360px;
     height: 450px;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: initial;
     width: 100%;
@@ -742,13 +742,7 @@ hr.divider {
 #form-contact form .field input.message, #form-contact form .field textarea.message, #form-contact form .field select.message {
   height: 150px;
 }
-#form-contact .how-to-arrive div div {
-  flex-direction: column;
-}
-#form-contact .how-to-arrive div div img {
-  width: 100%;
-}
-#form-contact a {
+#form-contact form a {
   min-width: 150px;
   width: 200px;
   border: none;
@@ -766,57 +760,43 @@ hr.divider {
   color: var(--bg-color);
   background-color: var(--green-90);
   color: var(--white);
-  margin-top: 20px;
-  margin-bottom: 50px;
+  margin: 30px 0;
 }
-#form-contact a:hover {
+#form-contact form a:hover {
   background-color: var(--green-100);
 }
-#form-contact a:active {
+#form-contact form a:active {
   background-color: var(--green-50);
 }
-#form-contact a:hover {
+#form-contact form a:hover {
   background-color: var(--green-hv);
 }
-#form-contact a:active {
+#form-contact form a:active {
   background-color: var(--green-act);
 }
-#form-contact #how-to-arrive div div {
-  position: relative;
-  margin: 0 25px;
-  flex-direction: row;
+#form-contact #how-to-arrive {
+  flex-direction: column;
+  margin-top: 40px;
+}
+#form-contact #how-to-arrive div {
   justify-content: space-around;
-  align-items: flex-start;
-  justify-content: flex-start;
+}
+#form-contact #how-to-arrive div div {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 #form-contact #how-to-arrive div div img {
-  position: relative;
-  justify-content: flex-start;
-  width: 35px;
-  top: 10px;
-}
-#form-contact #how-to-arrive div div img:first-child {
-  left: 230px;
-}
-#form-contact #how-to-arrive div div img:last-child {
-  left: 50px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
 }
 #form-contact #how-to-arrive div div span {
-  position: absolute;
   font-size: 16px;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  text-transform: uppercase;
   font-weight: 600;
-  color: var(--gray);
-  margin-top: 5px;
-}
-#form-contact #how-to-arrive div div span:first-child {
-  left: 10px;
 }
 #form-contact #how-to-arrive div div span small {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
 }
 #form-contact #google-map {
@@ -825,9 +805,14 @@ hr.divider {
   padding: 0;
 }
 
-@media (min-width: 1380px) {
+@media (min-width: 1200px) {
   #form-contact {
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #form-contact form {
+    padding: 0 20px;
   }
   #form-contact form h2 {
     color: var(--gray);
@@ -836,6 +821,16 @@ hr.divider {
     font-weight: 400;
     text-align: left;
     margin: 100px var(--dspace);
+  }
+  #form-contact form p {
+    font-size: 24px;
+    padding: 20px;
+  }
+  #form-contact #how-to-arrive {
+    flex-direction: column;
+  }
+  #form-contact #how-to-arrive div {
+    flex-direction: row;
   }
 }
 #footer {
