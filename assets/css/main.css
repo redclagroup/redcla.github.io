@@ -631,6 +631,7 @@ hr.divider {
 }
 #our-reservation form .field input, #our-reservation form .field textarea, #our-reservation form .field select {
   height: 40px;
+  width: 100%;
   border: var(--white) 2px solid;
   line-height: 1.5em;
   padding-left: 70px;
