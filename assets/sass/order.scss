@@ -83,18 +83,19 @@
     }
 }
 @media (min-width: 1200px) {
-    #menu{
+    #list-menu{
         flex-direction: row;
         background-image: url(/assets/images/menu_tomato_bread.webp);
         max-height: initial;
         background-position-x:80%;
         background-position-y: top;
         background-attachment: fixed;
+        width: 80%;
         width: 100%;
         > section {
             margin-top: 115px;
             margin-bottom: 115px;
-            background-color: var(--brown-50);
+            background-color: rgba($color: #b8945d, $alpha: .5);
             width: calc((100vw - 50%));
             margin-left:var(--dspace);
             header {
